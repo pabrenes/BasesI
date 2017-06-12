@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="168d3425-129d-4c7f-8f00-48915e29149a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:59571/wsCentroMedico.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="wsCentroMedico.disco" MetadataType="Disco" ID="15eeba47-552e-4300-9d33-9c8cdb787f18" SourceId="1" SourceUrl="http://localhost:59571/wsCentroMedico.svc?disco" />
+    <MetadataFile FileName="wsCentroMedico.wsdl" MetadataType="Wsdl" ID="f6c69673-c5e9-46c6-b618-98456a2fe542" SourceId="1" SourceUrl="http://localhost:59571/wsCentroMedico.svc?wsdl" />
+    <MetadataFile FileName="wsCentroMedico1.wsdl" MetadataType="Wsdl" ID="1f9f945e-6280-4e2b-bcde-a6cb367911f4" SourceId="1" SourceUrl="http://localhost:59571/wsCentroMedico.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="wsCentroMedico.xsd" MetadataType="Schema" ID="8f82dc55-c149-4766-bda2-42c7e553a450" SourceId="1" SourceUrl="http://localhost:59571/wsCentroMedico.svc?xsd=xsd0" />
+    <MetadataFile FileName="wsCentroMedico1.xsd" MetadataType="Schema" ID="ff749500-bdcc-441d-9943-4ff62e71e9d3" SourceId="1" SourceUrl="http://localhost:59571/wsCentroMedico.svc?xsd=xsd1" />
+    <MetadataFile FileName="wsCentroMedico2.xsd" MetadataType="Schema" ID="d7a799df-599b-48fd-8584-449d54100a01" SourceId="1" SourceUrl="http://localhost:59571/wsCentroMedico.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
