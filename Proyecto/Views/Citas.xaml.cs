@@ -19,16 +19,16 @@ namespace Proyecto.Views
 
         public Citas() {
             InitializeComponent();
-            servicio.getPacientesCompleted += new EventHandler<ws.getPacientesCompletedEventArgs>(cargaClientes);
-            servicio.getPacientesAsync();
+            servicio.getCitasCompleted += new EventHandler<ws.getCitasCompletedEventArgs>(cargaClientes);
+            servicio.getCitasAsync();
         }
 
         // Executes when the user navigates to this page.
         protected override void OnNavigatedTo(NavigationEventArgs e) {
         }
 
-        public void cargaClientes(object sender, ws.getPacientesCompletedEventArgs e) {
-            DG_PACIENTES.ItemsSource = e.Result;
+        public void cargaClientes(object sender, ws.getCitasCompletedEventArgs e) {
+            DG_CITAS.ItemsSource = e.Result;
         }
 
     }

@@ -165,6 +165,186 @@ namespace Proyecto.ws {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="clCita", Namespace="http://schemas.datacontract.org/2004/07/")]
+    public partial class clCita : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string CedulaPacienteField;
+        
+        private string DiaCitaField;
+        
+        private decimal EspecialidadField;
+        
+        private string EstadoField;
+        
+        private System.DateTime FechaCitaField;
+        
+        private decimal HoraCitaField;
+        
+        private decimal IDCitaField;
+        
+        private System.Nullable<decimal> IDFacturaField;
+        
+        private decimal MedicoField;
+        
+        private string ObservacionesField;
+        
+        private decimal SedeField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CedulaPaciente {
+            get {
+                return this.CedulaPacienteField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CedulaPacienteField, value) != true)) {
+                    this.CedulaPacienteField = value;
+                    this.RaisePropertyChanged("CedulaPaciente");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DiaCita {
+            get {
+                return this.DiaCitaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DiaCitaField, value) != true)) {
+                    this.DiaCitaField = value;
+                    this.RaisePropertyChanged("DiaCita");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Especialidad {
+            get {
+                return this.EspecialidadField;
+            }
+            set {
+                if ((this.EspecialidadField.Equals(value) != true)) {
+                    this.EspecialidadField = value;
+                    this.RaisePropertyChanged("Especialidad");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EstadoField, value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime FechaCita {
+            get {
+                return this.FechaCitaField;
+            }
+            set {
+                if ((this.FechaCitaField.Equals(value) != true)) {
+                    this.FechaCitaField = value;
+                    this.RaisePropertyChanged("FechaCita");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal HoraCita {
+            get {
+                return this.HoraCitaField;
+            }
+            set {
+                if ((this.HoraCitaField.Equals(value) != true)) {
+                    this.HoraCitaField = value;
+                    this.RaisePropertyChanged("HoraCita");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal IDCita {
+            get {
+                return this.IDCitaField;
+            }
+            set {
+                if ((this.IDCitaField.Equals(value) != true)) {
+                    this.IDCitaField = value;
+                    this.RaisePropertyChanged("IDCita");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> IDFactura {
+            get {
+                return this.IDFacturaField;
+            }
+            set {
+                if ((this.IDFacturaField.Equals(value) != true)) {
+                    this.IDFacturaField = value;
+                    this.RaisePropertyChanged("IDFactura");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Medico {
+            get {
+                return this.MedicoField;
+            }
+            set {
+                if ((this.MedicoField.Equals(value) != true)) {
+                    this.MedicoField = value;
+                    this.RaisePropertyChanged("Medico");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Observaciones {
+            get {
+                return this.ObservacionesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ObservacionesField, value) != true)) {
+                    this.ObservacionesField = value;
+                    this.RaisePropertyChanged("Observaciones");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Sede {
+            get {
+                return this.SedeField;
+            }
+            set {
+                if ((this.SedeField.Equals(value) != true)) {
+                    this.SedeField = value;
+                    this.RaisePropertyChanged("Sede");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="ws.wsCentroMedico")]
     public interface wsCentroMedico {
@@ -173,6 +353,11 @@ namespace Proyecto.ws {
         System.IAsyncResult BegingetPacientes(System.AsyncCallback callback, object asyncState);
         
         System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clPaciente> EndgetPacientes(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/wsCentroMedico/getCitas", ReplyAction="http://tempuri.org/wsCentroMedico/getCitasResponse")]
+        System.IAsyncResult BegingetCitas(System.AsyncCallback callback, object asyncState);
+        
+        System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCita> EndgetCitas(System.IAsyncResult result);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -200,6 +385,25 @@ namespace Proyecto.ws {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class getCitasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public getCitasCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCita> Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCita>)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public partial class wsCentroMedicoClient : System.ServiceModel.ClientBase<Proyecto.ws.wsCentroMedico>, Proyecto.ws.wsCentroMedico {
         
         private BeginOperationDelegate onBegingetPacientesDelegate;
@@ -207,6 +411,12 @@ namespace Proyecto.ws {
         private EndOperationDelegate onEndgetPacientesDelegate;
         
         private System.Threading.SendOrPostCallback ongetPacientesCompletedDelegate;
+        
+        private BeginOperationDelegate onBegingetCitasDelegate;
+        
+        private EndOperationDelegate onEndgetCitasDelegate;
+        
+        private System.Threading.SendOrPostCallback ongetCitasCompletedDelegate;
         
         private BeginOperationDelegate onBeginOpenDelegate;
         
@@ -263,6 +473,8 @@ namespace Proyecto.ws {
         
         public event System.EventHandler<getPacientesCompletedEventArgs> getPacientesCompleted;
         
+        public event System.EventHandler<getCitasCompletedEventArgs> getCitasCompleted;
+        
         public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> OpenCompleted;
         
         public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> CloseCompleted;
@@ -309,6 +521,50 @@ namespace Proyecto.ws {
                 this.ongetPacientesCompletedDelegate = new System.Threading.SendOrPostCallback(this.OngetPacientesCompleted);
             }
             base.InvokeAsync(this.onBegingetPacientesDelegate, null, this.onEndgetPacientesDelegate, this.ongetPacientesCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult Proyecto.ws.wsCentroMedico.BegingetCitas(System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BegingetCitas(callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCita> Proyecto.ws.wsCentroMedico.EndgetCitas(System.IAsyncResult result) {
+            return base.Channel.EndgetCitas(result);
+        }
+        
+        private System.IAsyncResult OnBegingetCitas(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return ((Proyecto.ws.wsCentroMedico)(this)).BegingetCitas(callback, asyncState);
+        }
+        
+        private object[] OnEndgetCitas(System.IAsyncResult result) {
+            System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCita> retVal = ((Proyecto.ws.wsCentroMedico)(this)).EndgetCitas(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OngetCitasCompleted(object state) {
+            if ((this.getCitasCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.getCitasCompleted(this, new getCitasCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void getCitasAsync() {
+            this.getCitasAsync(null);
+        }
+        
+        public void getCitasAsync(object userState) {
+            if ((this.onBegingetCitasDelegate == null)) {
+                this.onBegingetCitasDelegate = new BeginOperationDelegate(this.OnBegingetCitas);
+            }
+            if ((this.onEndgetCitasDelegate == null)) {
+                this.onEndgetCitasDelegate = new EndOperationDelegate(this.OnEndgetCitas);
+            }
+            if ((this.ongetCitasCompletedDelegate == null)) {
+                this.ongetCitasCompletedDelegate = new System.Threading.SendOrPostCallback(this.OngetCitasCompleted);
+            }
+            base.InvokeAsync(this.onBegingetCitasDelegate, null, this.onEndgetCitasDelegate, this.ongetCitasCompletedDelegate, userState);
         }
         
         private System.IAsyncResult OnBeginOpen(object[] inValues, System.AsyncCallback callback, object asyncState) {
@@ -396,6 +652,18 @@ namespace Proyecto.ws {
             public System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clPaciente> EndgetPacientes(System.IAsyncResult result) {
                 object[] _args = new object[0];
                 System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clPaciente> _result = ((System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clPaciente>)(base.EndInvoke("getPacientes", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BegingetCitas(System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[0];
+                System.IAsyncResult _result = base.BeginInvoke("getCitas", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCita> EndgetCitas(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCita> _result = ((System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCita>)(base.EndInvoke("getCitas", _args, result)));
                 return _result;
             }
         }

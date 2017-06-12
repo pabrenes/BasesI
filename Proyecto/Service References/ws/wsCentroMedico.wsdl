@@ -22,6 +22,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="getCitas">
+      <soap12:operation soapAction="http://tempuri.org/wsCentroMedico/getCitas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="wsCentroMedico">
     <wsdl:port name="CustomBinding_wsCentroMedico" binding="tns:CustomBinding_wsCentroMedico">

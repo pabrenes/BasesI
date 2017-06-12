@@ -20,4 +20,26 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="clPaciente" nillable="true" type="tns:clPaciente" />
+  <xs:complexType name="ArrayOfclCita">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clCita" nillable="true" type="tns:clCita" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfclCita" nillable="true" type="tns:ArrayOfclCita" />
+  <xs:complexType name="clCita">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CedulaPaciente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiaCita" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Especialidad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaCita" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HoraCita" type="xs:decimal" />
+      <xs:element minOccurs="0" name="IDCita" type="xs:decimal" />
+      <xs:element minOccurs="0" name="IDFactura" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Medico" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sede" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clCita" nillable="true" type="tns:clCita" />
 </xs:schema>

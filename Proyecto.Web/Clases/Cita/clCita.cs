@@ -30,7 +30,7 @@ public class clCita
 	[DataMember]
 	public string Estado { get; set; }
 	[DataMember]
-	public decimal IDFactura { get; set; }
+	public decimal? IDFactura { get; set; }
 
 	public clCita(
 		decimal IDCita,
