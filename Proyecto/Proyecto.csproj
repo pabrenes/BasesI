@@ -148,9 +148,6 @@
     <None Include="Service References\ws\Proyecto.ws.clCita.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ws\Proyecto.ws.clPaciente.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\ws\wsCentroMedico.disco" />
     <None Include="Service References\ws\configuration91.svcinfo" />
     <None Include="Service References\ws\configuration.svcinfo" />
@@ -168,6 +165,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ws\wsCentroMedico2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ws\wsCentroMedico3.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

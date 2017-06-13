@@ -13,8 +13,8 @@
   <wsdl:binding name="CustomBinding_wsCentroMedico" type="i0:wsCentroMedico">
     <wsp:PolicyReference URI="#CustomBinding_wsCentroMedico_policy" />
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="getPacientes">
-      <soap12:operation soapAction="http://tempuri.org/wsCentroMedico/getPacientes" style="document" />
+    <wsdl:operation name="getCitas">
+      <soap12:operation soapAction="http://tempuri.org/wsCentroMedico/getCitas" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -22,8 +22,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="getCitas">
-      <soap12:operation soapAction="http://tempuri.org/wsCentroMedico/getCitas" style="document" />
+    <wsdl:operation name="getPacientes">
+      <soap12:operation soapAction="http://tempuri.org/wsCentroMedico/getPacientes" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

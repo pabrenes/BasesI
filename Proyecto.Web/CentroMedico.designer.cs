@@ -433,6 +433,20 @@ namespace cnCentroMedico
 				return this.GetTable<enCentroMedico.PUESTO>();
 			}
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="PACIENTE.obtenerCedulaNombrePacientes")]
+		public ISingleResult<enCentroMedico.obtenerCedulaNombrePacientesResult> obtenerCedulaNombrePacientes()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<enCentroMedico.obtenerCedulaNombrePacientesResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="EMPLEADO.obtenerMedicosEspecialiad")]
+		public ISingleResult<enCentroMedico.obtenerMedicosEspecialiadResult> obtenerMedicosEspecialiad([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Sede", DbType="Int")] System.Nullable<int> sede)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sede);
+			return ((ISingleResult<enCentroMedico.obtenerMedicosEspecialiadResult>)(result.ReturnValue));
+		}
 	}
 }
 namespace enCentroMedico
@@ -8350,6 +8364,166 @@ namespace enCentroMedico
 		{
 			this.SendPropertyChanging();
 			entity.PUESTO = null;
+		}
+	}
+	
+	public partial class obtenerCedulaNombrePacientesResult
+	{
+		
+		private string _CEDULA;
+		
+		private string _APELLIDO;
+		
+		private string _NOMBRE;
+		
+		public obtenerCedulaNombrePacientesResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CEDULA", DbType="VarChar(12) NOT NULL", CanBeNull=false)]
+		public string CEDULA
+		{
+			get
+			{
+				return this._CEDULA;
+			}
+			set
+			{
+				if ((this._CEDULA != value))
+				{
+					this._CEDULA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_APELLIDO", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string APELLIDO
+		{
+			get
+			{
+				return this._APELLIDO;
+			}
+			set
+			{
+				if ((this._APELLIDO != value))
+				{
+					this._APELLIDO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string NOMBRE
+		{
+			get
+			{
+				return this._NOMBRE;
+			}
+			set
+			{
+				if ((this._NOMBRE != value))
+				{
+					this._NOMBRE = value;
+				}
+			}
+		}
+	}
+	
+	public partial class obtenerMedicosEspecialiadResult
+	{
+		
+		private string _APELLIDOS;
+		
+		private string _NOMBRE;
+		
+		private string _NOMBRE1;
+		
+		private decimal _IDEMPLEADO;
+		
+		private decimal _IDSEDE;
+		
+		public obtenerMedicosEspecialiadResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_APELLIDOS", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
+		public string APELLIDOS
+		{
+			get
+			{
+				return this._APELLIDOS;
+			}
+			set
+			{
+				if ((this._APELLIDOS != value))
+				{
+					this._APELLIDOS = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string NOMBRE
+		{
+			get
+			{
+				return this._NOMBRE;
+			}
+			set
+			{
+				if ((this._NOMBRE != value))
+				{
+					this._NOMBRE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE1", DbType="VarChar(40) NOT NULL", CanBeNull=false)]
+		public string NOMBRE1
+		{
+			get
+			{
+				return this._NOMBRE1;
+			}
+			set
+			{
+				if ((this._NOMBRE1 != value))
+				{
+					this._NOMBRE1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDEMPLEADO", DbType="Decimal(9,0) NOT NULL")]
+		public decimal IDEMPLEADO
+		{
+			get
+			{
+				return this._IDEMPLEADO;
+			}
+			set
+			{
+				if ((this._IDEMPLEADO != value))
+				{
+					this._IDEMPLEADO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDSEDE", DbType="Decimal(4,0) NOT NULL")]
+		public decimal IDSEDE
+		{
+			get
+			{
+				return this._IDSEDE;
+			}
+			set
+			{
+				if ((this._IDSEDE != value))
+				{
+					this._IDSEDE = value;
+				}
+			}
 		}
 	}
 }

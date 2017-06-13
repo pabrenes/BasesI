@@ -17,156 +17,6 @@ namespace Proyecto.ws {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="clPaciente", Namespace="http://schemas.datacontract.org/2004/07/")]
-    public partial class clPaciente : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string ApellidoField;
-        
-        private string CedulaField;
-        
-        private string DireccionField;
-        
-        private string EstadoCivilField;
-        
-        private System.DateTime FechaNacimientoField;
-        
-        private string FotoField;
-        
-        private string NombreField;
-        
-        private string OcupacionField;
-        
-        private string TipoField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Apellido {
-            get {
-                return this.ApellidoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ApellidoField, value) != true)) {
-                    this.ApellidoField = value;
-                    this.RaisePropertyChanged("Apellido");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Cedula {
-            get {
-                return this.CedulaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CedulaField, value) != true)) {
-                    this.CedulaField = value;
-                    this.RaisePropertyChanged("Cedula");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Direccion {
-            get {
-                return this.DireccionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DireccionField, value) != true)) {
-                    this.DireccionField = value;
-                    this.RaisePropertyChanged("Direccion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EstadoCivil {
-            get {
-                return this.EstadoCivilField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EstadoCivilField, value) != true)) {
-                    this.EstadoCivilField = value;
-                    this.RaisePropertyChanged("EstadoCivil");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime FechaNacimiento {
-            get {
-                return this.FechaNacimientoField;
-            }
-            set {
-                if ((this.FechaNacimientoField.Equals(value) != true)) {
-                    this.FechaNacimientoField = value;
-                    this.RaisePropertyChanged("FechaNacimiento");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Foto {
-            get {
-                return this.FotoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FotoField, value) != true)) {
-                    this.FotoField = value;
-                    this.RaisePropertyChanged("Foto");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Nombre {
-            get {
-                return this.NombreField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
-                    this.NombreField = value;
-                    this.RaisePropertyChanged("Nombre");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Ocupacion {
-            get {
-                return this.OcupacionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.OcupacionField, value) != true)) {
-                    this.OcupacionField = value;
-                    this.RaisePropertyChanged("Ocupacion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Tipo {
-            get {
-                return this.TipoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TipoField, value) != true)) {
-                    this.TipoField = value;
-                    this.RaisePropertyChanged("Tipo");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="clCita", Namespace="http://schemas.datacontract.org/2004/07/")]
     public partial class clCita : object, System.ComponentModel.INotifyPropertyChanged {
         
@@ -349,38 +199,19 @@ namespace Proyecto.ws {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="ws.wsCentroMedico")]
     public interface wsCentroMedico {
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/wsCentroMedico/getPacientes", ReplyAction="http://tempuri.org/wsCentroMedico/getPacientesResponse")]
-        System.IAsyncResult BegingetPacientes(System.AsyncCallback callback, object asyncState);
-        
-        System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clPaciente> EndgetPacientes(System.IAsyncResult result);
-        
         [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/wsCentroMedico/getCitas", ReplyAction="http://tempuri.org/wsCentroMedico/getCitasResponse")]
         System.IAsyncResult BegingetCitas(System.AsyncCallback callback, object asyncState);
         
         System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCita> EndgetCitas(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/wsCentroMedico/getPacientes", ReplyAction="http://tempuri.org/wsCentroMedico/getPacientesResponse")]
+        System.IAsyncResult BegingetPacientes(System.AsyncCallback callback, object asyncState);
+        
+        System.Collections.ObjectModel.ObservableCollection<string> EndgetPacientes(System.IAsyncResult result);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface wsCentroMedicoChannel : Proyecto.ws.wsCentroMedico, System.ServiceModel.IClientChannel {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class getPacientesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public getPacientesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clPaciente> Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clPaciente>)(this.results[0]));
-            }
-        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -404,19 +235,38 @@ namespace Proyecto.ws {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class getPacientesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public getPacientesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public System.Collections.ObjectModel.ObservableCollection<string> Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((System.Collections.ObjectModel.ObservableCollection<string>)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public partial class wsCentroMedicoClient : System.ServiceModel.ClientBase<Proyecto.ws.wsCentroMedico>, Proyecto.ws.wsCentroMedico {
-        
-        private BeginOperationDelegate onBegingetPacientesDelegate;
-        
-        private EndOperationDelegate onEndgetPacientesDelegate;
-        
-        private System.Threading.SendOrPostCallback ongetPacientesCompletedDelegate;
         
         private BeginOperationDelegate onBegingetCitasDelegate;
         
         private EndOperationDelegate onEndgetCitasDelegate;
         
         private System.Threading.SendOrPostCallback ongetCitasCompletedDelegate;
+        
+        private BeginOperationDelegate onBegingetPacientesDelegate;
+        
+        private EndOperationDelegate onEndgetPacientesDelegate;
+        
+        private System.Threading.SendOrPostCallback ongetPacientesCompletedDelegate;
         
         private BeginOperationDelegate onBeginOpenDelegate;
         
@@ -471,57 +321,13 @@ namespace Proyecto.ws {
             }
         }
         
-        public event System.EventHandler<getPacientesCompletedEventArgs> getPacientesCompleted;
-        
         public event System.EventHandler<getCitasCompletedEventArgs> getCitasCompleted;
+        
+        public event System.EventHandler<getPacientesCompletedEventArgs> getPacientesCompleted;
         
         public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> OpenCompleted;
         
         public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> CloseCompleted;
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult Proyecto.ws.wsCentroMedico.BegingetPacientes(System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BegingetPacientes(callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clPaciente> Proyecto.ws.wsCentroMedico.EndgetPacientes(System.IAsyncResult result) {
-            return base.Channel.EndgetPacientes(result);
-        }
-        
-        private System.IAsyncResult OnBegingetPacientes(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            return ((Proyecto.ws.wsCentroMedico)(this)).BegingetPacientes(callback, asyncState);
-        }
-        
-        private object[] OnEndgetPacientes(System.IAsyncResult result) {
-            System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clPaciente> retVal = ((Proyecto.ws.wsCentroMedico)(this)).EndgetPacientes(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OngetPacientesCompleted(object state) {
-            if ((this.getPacientesCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.getPacientesCompleted(this, new getPacientesCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void getPacientesAsync() {
-            this.getPacientesAsync(null);
-        }
-        
-        public void getPacientesAsync(object userState) {
-            if ((this.onBegingetPacientesDelegate == null)) {
-                this.onBegingetPacientesDelegate = new BeginOperationDelegate(this.OnBegingetPacientes);
-            }
-            if ((this.onEndgetPacientesDelegate == null)) {
-                this.onEndgetPacientesDelegate = new EndOperationDelegate(this.OnEndgetPacientes);
-            }
-            if ((this.ongetPacientesCompletedDelegate == null)) {
-                this.ongetPacientesCompletedDelegate = new System.Threading.SendOrPostCallback(this.OngetPacientesCompleted);
-            }
-            base.InvokeAsync(this.onBegingetPacientesDelegate, null, this.onEndgetPacientesDelegate, this.ongetPacientesCompletedDelegate, userState);
-        }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult Proyecto.ws.wsCentroMedico.BegingetCitas(System.AsyncCallback callback, object asyncState) {
@@ -565,6 +371,50 @@ namespace Proyecto.ws {
                 this.ongetCitasCompletedDelegate = new System.Threading.SendOrPostCallback(this.OngetCitasCompleted);
             }
             base.InvokeAsync(this.onBegingetCitasDelegate, null, this.onEndgetCitasDelegate, this.ongetCitasCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult Proyecto.ws.wsCentroMedico.BegingetPacientes(System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BegingetPacientes(callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Collections.ObjectModel.ObservableCollection<string> Proyecto.ws.wsCentroMedico.EndgetPacientes(System.IAsyncResult result) {
+            return base.Channel.EndgetPacientes(result);
+        }
+        
+        private System.IAsyncResult OnBegingetPacientes(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return ((Proyecto.ws.wsCentroMedico)(this)).BegingetPacientes(callback, asyncState);
+        }
+        
+        private object[] OnEndgetPacientes(System.IAsyncResult result) {
+            System.Collections.ObjectModel.ObservableCollection<string> retVal = ((Proyecto.ws.wsCentroMedico)(this)).EndgetPacientes(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OngetPacientesCompleted(object state) {
+            if ((this.getPacientesCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.getPacientesCompleted(this, new getPacientesCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void getPacientesAsync() {
+            this.getPacientesAsync(null);
+        }
+        
+        public void getPacientesAsync(object userState) {
+            if ((this.onBegingetPacientesDelegate == null)) {
+                this.onBegingetPacientesDelegate = new BeginOperationDelegate(this.OnBegingetPacientes);
+            }
+            if ((this.onEndgetPacientesDelegate == null)) {
+                this.onEndgetPacientesDelegate = new EndOperationDelegate(this.OnEndgetPacientes);
+            }
+            if ((this.ongetPacientesCompletedDelegate == null)) {
+                this.ongetPacientesCompletedDelegate = new System.Threading.SendOrPostCallback(this.OngetPacientesCompleted);
+            }
+            base.InvokeAsync(this.onBegingetPacientesDelegate, null, this.onEndgetPacientesDelegate, this.ongetPacientesCompletedDelegate, userState);
         }
         
         private System.IAsyncResult OnBeginOpen(object[] inValues, System.AsyncCallback callback, object asyncState) {
@@ -643,18 +493,6 @@ namespace Proyecto.ws {
                     base(client) {
             }
             
-            public System.IAsyncResult BegingetPacientes(System.AsyncCallback callback, object asyncState) {
-                object[] _args = new object[0];
-                System.IAsyncResult _result = base.BeginInvoke("getPacientes", _args, callback, asyncState);
-                return _result;
-            }
-            
-            public System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clPaciente> EndgetPacientes(System.IAsyncResult result) {
-                object[] _args = new object[0];
-                System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clPaciente> _result = ((System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clPaciente>)(base.EndInvoke("getPacientes", _args, result)));
-                return _result;
-            }
-            
             public System.IAsyncResult BegingetCitas(System.AsyncCallback callback, object asyncState) {
                 object[] _args = new object[0];
                 System.IAsyncResult _result = base.BeginInvoke("getCitas", _args, callback, asyncState);
@@ -664,6 +502,18 @@ namespace Proyecto.ws {
             public System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCita> EndgetCitas(System.IAsyncResult result) {
                 object[] _args = new object[0];
                 System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCita> _result = ((System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCita>)(base.EndInvoke("getCitas", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BegingetPacientes(System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[0];
+                System.IAsyncResult _result = base.BeginInvoke("getPacientes", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public System.Collections.ObjectModel.ObservableCollection<string> EndgetPacientes(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                System.Collections.ObjectModel.ObservableCollection<string> _result = ((System.Collections.ObjectModel.ObservableCollection<string>)(base.EndInvoke("getPacientes", _args, result)));
                 return _result;
             }
         }

@@ -16,19 +16,19 @@ namespace Proyecto.Views
     public partial class Citas : Page
     {
         ws.wsCentroMedicoClient servicio = new ws.wsCentroMedicoClient();
-
+        
         public Citas() {
             InitializeComponent();
-            servicio.getCitasCompleted += new EventHandler<ws.getCitasCompletedEventArgs>(cargaClientes);
-            servicio.getCitasAsync();
+            servicio.getPacientesCompleted += new EventHandler<ws.getPacientesCompletedEventArgs>(cargaPacientes);
+            servicio.getPacientesAsync();
         }
 
         // Executes when the user navigates to this page.
         protected override void OnNavigatedTo(NavigationEventArgs e) {
         }
 
-        public void cargaClientes(object sender, ws.getCitasCompletedEventArgs e) {
-            DG_CITAS.ItemsSource = e.Result;
+        public void cargaPacientes(object sender, ws.getPacientesCompletedEventArgs e) {
+            CB_Pacientes.ItemsSource = e.Result;
         }
 
     }

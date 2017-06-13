@@ -15,30 +15,6 @@ namespace Proyecto.Web
     {
 
         [OperationContract]
-        public ObservableCollection<clPaciente> getPacientes() {
-            var lista = new ObservableCollection<clPaciente>();
-            var dataBase = new dcCentroMedico();
-            var vPaciente = from s in dataBase.PACIENTEs select s;
-            clPaciente tempPaciente;
-
-            foreach(var fila in vPaciente) {
-                tempPaciente = new clPaciente(
-                    fila.CEDULA,
-                    fila.NOMBRE,
-                    fila.APELLIDO,
-                    fila.FCHNACIMIENTO,
-                    fila.ESTADOCIVIL.ToString(),
-                    fila.OCUPACION,
-                    fila.FOTO,
-                    fila.DIRECCION,
-                    fila.TIPO.ToString()
-                );
-                lista.Add(tempPaciente);
-            }
-            return lista;
-        }
-
-        [OperationContract]
         public ObservableCollection<clCita> getCitas() {
             var lista = new ObservableCollection<clCita>();
             var dataBase = new dcCentroMedico();
@@ -60,6 +36,24 @@ namespace Proyecto.Web
                     fila.IDFACTURA ?? -1
                 );
                 lista.Add(tempCita);
+            }
+            return lista;
+        }
+
+        [OperationContract]
+        public ObservableCollection<string> getPacientes() {
+            var lista = new ObservableCollection<string>();
+            var dataBase = new dcCentroMedico();
+            var vPaciente = dataBase.obtenerCedulaNombrePacientes();
+            clPacienteCNA tempPaciente;
+
+            foreach (var fila in vPaciente) {
+                tempPaciente = new clPacienteCNA(
+                    fila.CEDULA,
+                    fila.NOMBRE,
+                    fila.APELLIDO
+                );
+                lista.Add(tempPaciente.toString());
             }
             return lista;
         }

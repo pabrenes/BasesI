@@ -5,28 +5,29 @@
       <xsd:import schemaLocation="http://localhost:59571/wsCentroMedico.svc?xsd=xsd0" namespace="http://tempuri.org" />
       <xsd:import schemaLocation="http://localhost:59571/wsCentroMedico.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:59571/wsCentroMedico.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+      <xsd:import schemaLocation="http://localhost:59571/wsCentroMedico.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="wsCentroMedico_getPacientes_InputMessage">
-    <wsdl:part name="parameters" element="tns:getPacientes" />
-  </wsdl:message>
-  <wsdl:message name="wsCentroMedico_getPacientes_OutputMessage">
-    <wsdl:part name="parameters" element="tns:getPacientesResponse" />
-  </wsdl:message>
   <wsdl:message name="wsCentroMedico_getCitas_InputMessage">
     <wsdl:part name="parameters" element="tns:getCitas" />
   </wsdl:message>
   <wsdl:message name="wsCentroMedico_getCitas_OutputMessage">
     <wsdl:part name="parameters" element="tns:getCitasResponse" />
   </wsdl:message>
+  <wsdl:message name="wsCentroMedico_getPacientes_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPacientes" />
+  </wsdl:message>
+  <wsdl:message name="wsCentroMedico_getPacientes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPacientesResponse" />
+  </wsdl:message>
   <wsdl:portType name="wsCentroMedico">
-    <wsdl:operation name="getPacientes">
-      <wsdl:input wsaw:Action="http://tempuri.org/wsCentroMedico/getPacientes" message="tns:wsCentroMedico_getPacientes_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/wsCentroMedico/getPacientesResponse" message="tns:wsCentroMedico_getPacientes_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="getCitas">
       <wsdl:input wsaw:Action="http://tempuri.org/wsCentroMedico/getCitas" message="tns:wsCentroMedico_getCitas_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/wsCentroMedico/getCitasResponse" message="tns:wsCentroMedico_getCitas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPacientes">
+      <wsdl:input wsaw:Action="http://tempuri.org/wsCentroMedico/getPacientes" message="tns:wsCentroMedico_getPacientes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/wsCentroMedico/getPacientesResponse" message="tns:wsCentroMedico_getPacientes_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
 </wsdl:definitions>

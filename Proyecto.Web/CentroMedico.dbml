@@ -368,4 +368,21 @@
       <Association Name="PUESTO_EMPLEADO" Member="EMPLEADOs" ThisKey="IDPUESTO" OtherKey="IDPUESTO" Type="EMPLEADO" />
     </Type>
   </Table>
+  <Function Name="PACIENTE.obtenerCedulaNombrePacientes" Method="obtenerCedulaNombrePacientes">
+    <ElementType Name="obtenerCedulaNombrePacientesResult">
+      <Column Name="CEDULA" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="APELLIDO" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="EMPLEADO.obtenerMedicosEspecialiad" Method="obtenerMedicosEspecialiad">
+    <Parameter Name="Sede" Parameter="sede" Type="System.Int32" DbType="Int" />
+    <ElementType Name="obtenerMedicosEspecialiadResult">
+      <Column Name="APELLIDOS" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="NOMBRE1" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="IDEMPLEADO" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" CanBeNull="false" />
+      <Column Name="IDSEDE" Type="System.Decimal" DbType="Decimal(4,0) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
 </Database>
