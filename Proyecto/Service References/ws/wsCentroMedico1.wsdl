@@ -31,6 +31,12 @@
   <wsdl:message name="wsCentroMedico_getSedes_OutputMessage">
     <wsdl:part name="parameters" element="tns:getSedesResponse" />
   </wsdl:message>
+  <wsdl:message name="wsCentroMedico_getHorarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:getHorarios" />
+  </wsdl:message>
+  <wsdl:message name="wsCentroMedico_getHorarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getHorariosResponse" />
+  </wsdl:message>
   <wsdl:portType name="wsCentroMedico">
     <wsdl:operation name="getCitas">
       <wsdl:input wsaw:Action="http://tempuri.org/wsCentroMedico/getCitas" message="tns:wsCentroMedico_getCitas_InputMessage" />
@@ -47,6 +53,10 @@
     <wsdl:operation name="getSedes">
       <wsdl:input wsaw:Action="http://tempuri.org/wsCentroMedico/getSedes" message="tns:wsCentroMedico_getSedes_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/wsCentroMedico/getSedesResponse" message="tns:wsCentroMedico_getSedes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getHorarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/wsCentroMedico/getHorarios" message="tns:wsCentroMedico_getHorarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/wsCentroMedico/getHorariosResponse" message="tns:wsCentroMedico_getHorarios_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
 </wsdl:definitions>

@@ -10,24 +10,22 @@ public class clHorario
 {
 
 	[DataMember]
-	public decimal IDEmpleado { get; set; }
-	[DataMember]
-	public decimal IDSede { get; set; }
-	[DataMember]
 	public string Dia { get; set; }
 	[DataMember]
 	public decimal Hora { get; set; }
+    [DataMember]
+    public string forUI { get; set; }
 
 	public clHorario(
-		decimal IDEmpleado,
-		decimal IDSede,
 		string Dia,
 		decimal Hora)
 	{
-		this.IDEmpleado = IDEmpleado;
-		this.IDSede = IDSede;
 		this.Dia = Dia;
 		this.Hora = Hora;
+        forUI = toString();
 	}
 
+    public string toString() {
+        return Hora + ":00";
+    }
 }

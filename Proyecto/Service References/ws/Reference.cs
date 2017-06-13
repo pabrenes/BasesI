@@ -435,6 +435,66 @@ namespace Proyecto.ws {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="clHorario", Namespace="http://schemas.datacontract.org/2004/07/")]
+    public partial class clHorario : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string DiaField;
+        
+        private decimal HoraField;
+        
+        private string forUIField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Dia {
+            get {
+                return this.DiaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DiaField, value) != true)) {
+                    this.DiaField = value;
+                    this.RaisePropertyChanged("Dia");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Hora {
+            get {
+                return this.HoraField;
+            }
+            set {
+                if ((this.HoraField.Equals(value) != true)) {
+                    this.HoraField = value;
+                    this.RaisePropertyChanged("Hora");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string forUI {
+            get {
+                return this.forUIField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.forUIField, value) != true)) {
+                    this.forUIField = value;
+                    this.RaisePropertyChanged("forUI");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="ws.wsCentroMedico")]
     public interface wsCentroMedico {
@@ -458,6 +518,11 @@ namespace Proyecto.ws {
         System.IAsyncResult BegingetSedes(System.AsyncCallback callback, object asyncState);
         
         System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clSede> EndgetSedes(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/wsCentroMedico/getHorarios", ReplyAction="http://tempuri.org/wsCentroMedico/getHorariosResponse")]
+        System.IAsyncResult BegingetHorarios(decimal Medico, decimal Sede, string Dia, System.DateTime Fecha, System.AsyncCallback callback, object asyncState);
+        
+        System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clHorario> EndgetHorarios(System.IAsyncResult result);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -542,6 +607,25 @@ namespace Proyecto.ws {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class getHorariosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public getHorariosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clHorario> Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clHorario>)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public partial class wsCentroMedicoClient : System.ServiceModel.ClientBase<Proyecto.ws.wsCentroMedico>, Proyecto.ws.wsCentroMedico {
         
         private BeginOperationDelegate onBegingetCitasDelegate;
@@ -567,6 +651,12 @@ namespace Proyecto.ws {
         private EndOperationDelegate onEndgetSedesDelegate;
         
         private System.Threading.SendOrPostCallback ongetSedesCompletedDelegate;
+        
+        private BeginOperationDelegate onBegingetHorariosDelegate;
+        
+        private EndOperationDelegate onEndgetHorariosDelegate;
+        
+        private System.Threading.SendOrPostCallback ongetHorariosCompletedDelegate;
         
         private BeginOperationDelegate onBeginOpenDelegate;
         
@@ -628,6 +718,8 @@ namespace Proyecto.ws {
         public event System.EventHandler<getMedicosCompletedEventArgs> getMedicosCompleted;
         
         public event System.EventHandler<getSedesCompletedEventArgs> getSedesCompleted;
+        
+        public event System.EventHandler<getHorariosCompletedEventArgs> getHorariosCompleted;
         
         public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> OpenCompleted;
         
@@ -811,6 +903,58 @@ namespace Proyecto.ws {
             base.InvokeAsync(this.onBegingetSedesDelegate, null, this.onEndgetSedesDelegate, this.ongetSedesCompletedDelegate, userState);
         }
         
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult Proyecto.ws.wsCentroMedico.BegingetHorarios(decimal Medico, decimal Sede, string Dia, System.DateTime Fecha, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BegingetHorarios(Medico, Sede, Dia, Fecha, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clHorario> Proyecto.ws.wsCentroMedico.EndgetHorarios(System.IAsyncResult result) {
+            return base.Channel.EndgetHorarios(result);
+        }
+        
+        private System.IAsyncResult OnBegingetHorarios(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            decimal Medico = ((decimal)(inValues[0]));
+            decimal Sede = ((decimal)(inValues[1]));
+            string Dia = ((string)(inValues[2]));
+            System.DateTime Fecha = ((System.DateTime)(inValues[3]));
+            return ((Proyecto.ws.wsCentroMedico)(this)).BegingetHorarios(Medico, Sede, Dia, Fecha, callback, asyncState);
+        }
+        
+        private object[] OnEndgetHorarios(System.IAsyncResult result) {
+            System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clHorario> retVal = ((Proyecto.ws.wsCentroMedico)(this)).EndgetHorarios(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OngetHorariosCompleted(object state) {
+            if ((this.getHorariosCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.getHorariosCompleted(this, new getHorariosCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void getHorariosAsync(decimal Medico, decimal Sede, string Dia, System.DateTime Fecha) {
+            this.getHorariosAsync(Medico, Sede, Dia, Fecha, null);
+        }
+        
+        public void getHorariosAsync(decimal Medico, decimal Sede, string Dia, System.DateTime Fecha, object userState) {
+            if ((this.onBegingetHorariosDelegate == null)) {
+                this.onBegingetHorariosDelegate = new BeginOperationDelegate(this.OnBegingetHorarios);
+            }
+            if ((this.onEndgetHorariosDelegate == null)) {
+                this.onEndgetHorariosDelegate = new EndOperationDelegate(this.OnEndgetHorarios);
+            }
+            if ((this.ongetHorariosCompletedDelegate == null)) {
+                this.ongetHorariosCompletedDelegate = new System.Threading.SendOrPostCallback(this.OngetHorariosCompleted);
+            }
+            base.InvokeAsync(this.onBegingetHorariosDelegate, new object[] {
+                        Medico,
+                        Sede,
+                        Dia,
+                        Fecha}, this.onEndgetHorariosDelegate, this.ongetHorariosCompletedDelegate, userState);
+        }
+        
         private System.IAsyncResult OnBeginOpen(object[] inValues, System.AsyncCallback callback, object asyncState) {
             return ((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(callback, asyncState);
         }
@@ -933,6 +1077,22 @@ namespace Proyecto.ws {
             public System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clSede> EndgetSedes(System.IAsyncResult result) {
                 object[] _args = new object[0];
                 System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clSede> _result = ((System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clSede>)(base.EndInvoke("getSedes", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BegingetHorarios(decimal Medico, decimal Sede, string Dia, System.DateTime Fecha, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[4];
+                _args[0] = Medico;
+                _args[1] = Sede;
+                _args[2] = Dia;
+                _args[3] = Fecha;
+                System.IAsyncResult _result = base.BeginInvoke("getHorarios", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clHorario> EndgetHorarios(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clHorario> _result = ((System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clHorario>)(base.EndInvoke("getHorarios", _args, result)));
                 return _result;
             }
         }

@@ -68,4 +68,18 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="clSede" nillable="true" type="tns:clSede" />
+  <xs:complexType name="ArrayOfclHorario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clHorario" nillable="true" type="tns:clHorario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfclHorario" nillable="true" type="tns:ArrayOfclHorario" />
+  <xs:complexType name="clHorario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Dia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Hora" type="xs:decimal" />
+      <xs:element minOccurs="0" name="forUI" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clHorario" nillable="true" type="tns:clHorario" />
 </xs:schema>

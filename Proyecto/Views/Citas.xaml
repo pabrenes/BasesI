@@ -15,12 +15,14 @@
 
         <ComboBox x:Name="CB_Pacientes" HorizontalAlignment="Left" Margin="780,100,0,0" VerticalAlignment="Top" Width="380" Height="25"/>
 
-        <ComboBox x:Name="CB_Medicos" HorizontalAlignment="Left" Margin="780,135,0,0" VerticalAlignment="Top" Width="380" Height="25"/>
+        <ComboBox x:Name="CB_Medicos" HorizontalAlignment="Left" Margin="780,135,0,0" VerticalAlignment="Top" Width="380" Height="25"
+                  SelectionChanged="CB_Medicos_ItemChanged"/>
 
         <ComboBox x:Name="CB_Horarios" HorizontalAlignment="Left" Margin="780,170,0,0" VerticalAlignment="Top" Width="380" Height="25"/>
         
         <sdk:DatePicker HorizontalAlignment="Left" Height="25" Margin="780,205,0,0" VerticalAlignment="Top" Width="380" SelectedDateFormat="Long"
-                        x:Name="DP_Fecha"/>
+                        x:Name="DP_Fecha"
+                        SelectedDateChanged="DP_Fecha_ItemChanged"/>
 
         <sdk:DataGrid HorizontalAlignment="Left" Height="200" Margin="60,440,0,0" VerticalAlignment="Top" Width="830"
                       Name="DG_Citas"

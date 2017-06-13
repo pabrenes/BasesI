@@ -94,5 +94,23 @@ namespace Proyecto.Web
             }
             return lista;
         }
+
+        [OperationContract]
+        public ObservableCollection<clHorario> getHorarios(decimal Medico, decimal Sede, string Dia, DateTime Fecha) {
+            var lista = new ObservableCollection<clHorario>();
+            var dataBase = new dcCentroMedico();
+            var vHorario = dataBase.obtenerDisponibilidadMedicoPorDia(Medico, Sede, Dia, Fecha);
+            clHorario tempHorario;
+
+            foreach (var fila in vHorario) {
+                tempHorario = new clHorario(
+                    fila.DIA.ToString(),
+                    fila.HORA
+                );
+                lista.Add(tempHorario);
+            }
+            return lista;
+        }
+
     }
 }

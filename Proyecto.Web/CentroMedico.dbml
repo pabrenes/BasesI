@@ -391,4 +391,14 @@
       <Column Name="IDESPECIALIDAD" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
+  <Function Name="EMPLEADO.obtenerDisponibilidadMedicoPorDia" Method="obtenerDisponibilidadMedicoPorDia">
+    <Parameter Name="Medico" Parameter="medico" Type="System.Decimal" DbType="Decimal(9,0)" />
+    <Parameter Name="Sede" Parameter="sede" Type="System.Decimal" DbType="Decimal(4,0)" />
+    <Parameter Name="Dia" Parameter="dia" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="Fecha" Parameter="fecha" Type="System.DateTime" DbType="Date" />
+    <ElementType Name="obtenerDisponibilidadMedicoPorDiaResult">
+      <Column Name="DIA" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="HORA" Type="System.Decimal" DbType="Decimal(2,0) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
 </Database>

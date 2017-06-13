@@ -51,4 +51,21 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="getHorarios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Medico" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Sede" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Dia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getHorariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="getHorariosResult" nillable="true" type="q5:ArrayOfclHorario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

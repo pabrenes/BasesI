@@ -454,6 +454,13 @@ namespace cnCentroMedico
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sede);
 			return ((ISingleResult<enCentroMedico.obtenerMedicosEspecialiadPorSedeResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="EMPLEADO.obtenerDisponibilidadMedicoPorDia")]
+		public ISingleResult<enCentroMedico.obtenerDisponibilidadMedicoPorDiaResult> obtenerDisponibilidadMedicoPorDia([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Medico", DbType="Decimal(9,0)")] System.Nullable<decimal> medico, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Sede", DbType="Decimal(4,0)")] System.Nullable<decimal> sede, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Dia", DbType="VarChar(1)")] string dia, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Fecha", DbType="Date")] System.Nullable<System.DateTime> fecha)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), medico, sede, dia, fecha);
+			return ((ISingleResult<enCentroMedico.obtenerDisponibilidadMedicoPorDiaResult>)(result.ReturnValue));
+		}
 	}
 }
 namespace enCentroMedico
@@ -8573,6 +8580,50 @@ namespace enCentroMedico
 				if ((this._IDESPECIALIDAD != value))
 				{
 					this._IDESPECIALIDAD = value;
+				}
+			}
+		}
+	}
+	
+	public partial class obtenerDisponibilidadMedicoPorDiaResult
+	{
+		
+		private char _DIA;
+		
+		private decimal _HORA;
+		
+		public obtenerDisponibilidadMedicoPorDiaResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DIA", DbType="Char(1) NOT NULL")]
+		public char DIA
+		{
+			get
+			{
+				return this._DIA;
+			}
+			set
+			{
+				if ((this._DIA != value))
+				{
+					this._DIA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HORA", DbType="Decimal(2,0) NOT NULL")]
+		public decimal HORA
+		{
+			get
+			{
+				return this._HORA;
+			}
+			set
+			{
+				if ((this._HORA != value))
+				{
+					this._HORA = value;
 				}
 			}
 		}
