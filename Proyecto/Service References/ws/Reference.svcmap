@@ -29,7 +29,6 @@
     <MetadataFile FileName="wsCentroMedico.xsd" MetadataType="Schema" ID="8f82dc55-c149-4766-bda2-42c7e553a450" SourceId="1" SourceUrl="http://localhost:59571/wsCentroMedico.svc?xsd=xsd0" />
     <MetadataFile FileName="wsCentroMedico1.xsd" MetadataType="Schema" ID="ff749500-bdcc-441d-9943-4ff62e71e9d3" SourceId="1" SourceUrl="http://localhost:59571/wsCentroMedico.svc?xsd=xsd1" />
     <MetadataFile FileName="wsCentroMedico2.xsd" MetadataType="Schema" ID="d7a799df-599b-48fd-8584-449d54100a01" SourceId="1" SourceUrl="http://localhost:59571/wsCentroMedico.svc?xsd=xsd2" />
-    <MetadataFile FileName="wsCentroMedico3.xsd" MetadataType="Schema" ID="d32a71fa-d549-4444-a41f-c80771f179da" SourceId="1" SourceUrl="http://localhost:59571/wsCentroMedico.svc?xsd=xsd3" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

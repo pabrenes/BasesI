@@ -15,6 +15,8 @@ public class clPacienteCNA
     public string Nombre { get; set; }
     [DataMember]
     public string Apellido { get; set; }
+    [DataMember]
+    public string forUI { get; set; }
 
     public clPacienteCNA(
         string Cedula,
@@ -23,6 +25,7 @@ public class clPacienteCNA
         this.Cedula = Cedula;
         this.Nombre = Nombre;
         this.Apellido = Apellido;
+        forUI = toString();
     }
 
     public string toString() {

@@ -22,4 +22,50 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="clCita" nillable="true" type="tns:clCita" />
+  <xs:complexType name="ArrayOfclPacienteCNA">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clPacienteCNA" nillable="true" type="tns:clPacienteCNA" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfclPacienteCNA" nillable="true" type="tns:ArrayOfclPacienteCNA" />
+  <xs:complexType name="clPacienteCNA">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Apellido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cedula" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="forUI" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clPacienteCNA" nillable="true" type="tns:clPacienteCNA" />
+  <xs:complexType name="ArrayOfclEmpleadoANNII">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clEmpleadoANNII" nillable="true" type="tns:clEmpleadoANNII" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfclEmpleadoANNII" nillable="true" type="tns:ArrayOfclEmpleadoANNII" />
+  <xs:complexType name="clEmpleadoANNII">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Apellidos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Especialidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDEmpleado" type="xs:decimal" />
+      <xs:element minOccurs="0" name="IDEspecialidad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="forUI" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clEmpleadoANNII" nillable="true" type="tns:clEmpleadoANNII" />
+  <xs:complexType name="ArrayOfclSede">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clSede" nillable="true" type="tns:clSede" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfclSede" nillable="true" type="tns:ArrayOfclSede" />
+  <xs:complexType name="clSede">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IDSede" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RazonSocial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="forUI" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clSede" nillable="true" type="tns:clSede" />
 </xs:schema>

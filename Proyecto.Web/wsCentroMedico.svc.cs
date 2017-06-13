@@ -41,8 +41,8 @@ namespace Proyecto.Web
         }
 
         [OperationContract]
-        public ObservableCollection<string> getPacientes() {
-            var lista = new ObservableCollection<string>();
+        public ObservableCollection<clPacienteCNA> getPacientes() {
+            var lista = new ObservableCollection<clPacienteCNA>();
             var dataBase = new dcCentroMedico();
             var vPaciente = dataBase.obtenerCedulaNombrePacientes();
             clPacienteCNA tempPaciente;
@@ -53,10 +53,46 @@ namespace Proyecto.Web
                     fila.NOMBRE,
                     fila.APELLIDO
                 );
-                lista.Add(tempPaciente.toString());
+                lista.Add(tempPaciente);
             }
             return lista;
         }
 
+        [OperationContract]
+        public ObservableCollection<clEmpleadoANNII> getMedicos(int sede) {
+            var lista = new ObservableCollection<clEmpleadoANNII>();
+            var dataBase = new dcCentroMedico();
+            var vMedico = dataBase.obtenerMedicosEspecialiadPorSede(sede);
+            clEmpleadoANNII tempMedico;
+
+            foreach (var fila in vMedico) {
+                tempMedico = new clEmpleadoANNII(
+                    fila.APELLIDOS,
+                    fila.NOMBRE,
+                    fila.ESPECIALIDAD,
+                    fila.IDEMPLEADO,
+                    fila.IDESPECIALIDAD
+                );
+                lista.Add(tempMedico);
+            }
+            return lista;
+        }
+
+        [OperationContract]
+        public ObservableCollection<clSede> getSedes() {
+            var lista = new ObservableCollection<clSede>();
+            var dataBase = new dcCentroMedico();
+            var vSede = dataBase.obtenerSedes();
+            clSede tempSede;
+
+            foreach (var fila in vSede) {
+                tempSede = new clSede(
+                    fila.IDSEDE,
+                    fila.RAZONSOCIAL
+                );
+                lista.Add(tempSede);
+            }
+            return lista;
+        }
     }
 }

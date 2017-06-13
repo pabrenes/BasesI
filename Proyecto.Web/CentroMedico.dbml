@@ -375,14 +375,20 @@
       <Column Name="NOMBRE" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
-  <Function Name="EMPLEADO.obtenerMedicosEspecialiad" Method="obtenerMedicosEspecialiad">
+  <Function Name="SEDE.obtenerSedes" Method="obtenerSedes">
+    <ElementType Name="obtenerSedesResult">
+      <Column Name="RAZONSOCIAL" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="IDSEDE" Type="System.Decimal" DbType="Decimal(4,0) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="EMPLEADO.obtenerMedicosEspecialiadPorSede" Method="obtenerMedicosEspecialiadPorSede">
     <Parameter Name="Sede" Parameter="sede" Type="System.Int32" DbType="Int" />
-    <ElementType Name="obtenerMedicosEspecialiadResult">
+    <ElementType Name="obtenerMedicosEspecialiadPorSedeResult">
       <Column Name="APELLIDOS" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
       <Column Name="NOMBRE" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="NOMBRE1" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="ESPECIALIDAD" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
       <Column Name="IDEMPLEADO" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" CanBeNull="false" />
-      <Column Name="IDSEDE" Type="System.Decimal" DbType="Decimal(4,0) NOT NULL" CanBeNull="false" />
+      <Column Name="IDESPECIALIDAD" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
 </Database>

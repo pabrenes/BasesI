@@ -12,22 +12,20 @@ public class clSede
     [DataMember]
     public decimal IDSede { get; set; }
     [DataMember]
-    public decimal CedulaJuridica { get; set; }
-    [DataMember]
     public string RazonSocial { get; set; }
     [DataMember]
-    public string Direccion { get; set; }
+    public string forUI { get; set; }
 
     public clSede(
         decimal IDSede,
-        decimal CedulaJuridica,
-        string RazonSocial,
-        string Direccion)
+        string RazonSocial)
     {
         this.IDSede = IDSede;
-        this.CedulaJuridica = CedulaJuridica;
         this.RazonSocial = RazonSocial;
-        this.Direccion = Direccion;
+        forUI = toString();
     }
 
+    public string toString() {
+        return IDSede + " - " + RazonSocial;
+    }
 }

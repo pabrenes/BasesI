@@ -441,11 +441,18 @@ namespace cnCentroMedico
 			return ((ISingleResult<enCentroMedico.obtenerCedulaNombrePacientesResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="EMPLEADO.obtenerMedicosEspecialiad")]
-		public ISingleResult<enCentroMedico.obtenerMedicosEspecialiadResult> obtenerMedicosEspecialiad([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Sede", DbType="Int")] System.Nullable<int> sede)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="SEDE.obtenerSedes")]
+		public ISingleResult<enCentroMedico.obtenerSedesResult> obtenerSedes()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<enCentroMedico.obtenerSedesResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="EMPLEADO.obtenerMedicosEspecialiadPorSede")]
+		public ISingleResult<enCentroMedico.obtenerMedicosEspecialiadPorSedeResult> obtenerMedicosEspecialiadPorSede([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Sede", DbType="Int")] System.Nullable<int> sede)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sede);
-			return ((ISingleResult<enCentroMedico.obtenerMedicosEspecialiadResult>)(result.ReturnValue));
+			return ((ISingleResult<enCentroMedico.obtenerMedicosEspecialiadPorSedeResult>)(result.ReturnValue));
 		}
 	}
 }
@@ -8429,20 +8436,64 @@ namespace enCentroMedico
 		}
 	}
 	
-	public partial class obtenerMedicosEspecialiadResult
+	public partial class obtenerSedesResult
+	{
+		
+		private string _RAZONSOCIAL;
+		
+		private decimal _IDSEDE;
+		
+		public obtenerSedesResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RAZONSOCIAL", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
+		public string RAZONSOCIAL
+		{
+			get
+			{
+				return this._RAZONSOCIAL;
+			}
+			set
+			{
+				if ((this._RAZONSOCIAL != value))
+				{
+					this._RAZONSOCIAL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDSEDE", DbType="Decimal(4,0) NOT NULL")]
+		public decimal IDSEDE
+		{
+			get
+			{
+				return this._IDSEDE;
+			}
+			set
+			{
+				if ((this._IDSEDE != value))
+				{
+					this._IDSEDE = value;
+				}
+			}
+		}
+	}
+	
+	public partial class obtenerMedicosEspecialiadPorSedeResult
 	{
 		
 		private string _APELLIDOS;
 		
 		private string _NOMBRE;
 		
-		private string _NOMBRE1;
+		private string _ESPECIALIDAD;
 		
 		private decimal _IDEMPLEADO;
 		
-		private decimal _IDSEDE;
+		private decimal _IDESPECIALIDAD;
 		
-		public obtenerMedicosEspecialiadResult()
+		public obtenerMedicosEspecialiadPorSedeResult()
 		{
 		}
 		
@@ -8478,18 +8529,18 @@ namespace enCentroMedico
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE1", DbType="VarChar(40) NOT NULL", CanBeNull=false)]
-		public string NOMBRE1
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ESPECIALIDAD", DbType="VarChar(40) NOT NULL", CanBeNull=false)]
+		public string ESPECIALIDAD
 		{
 			get
 			{
-				return this._NOMBRE1;
+				return this._ESPECIALIDAD;
 			}
 			set
 			{
-				if ((this._NOMBRE1 != value))
+				if ((this._ESPECIALIDAD != value))
 				{
-					this._NOMBRE1 = value;
+					this._ESPECIALIDAD = value;
 				}
 			}
 		}
@@ -8510,18 +8561,18 @@ namespace enCentroMedico
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDSEDE", DbType="Decimal(4,0) NOT NULL")]
-		public decimal IDSEDE
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDESPECIALIDAD", DbType="Decimal(9,0) NOT NULL")]
+		public decimal IDESPECIALIDAD
 		{
 			get
 			{
-				return this._IDSEDE;
+				return this._IDESPECIALIDAD;
 			}
 			set
 			{
-				if ((this._IDSEDE != value))
+				if ((this._IDESPECIALIDAD != value))
 				{
-					this._IDSEDE = value;
+					this._IDESPECIALIDAD = value;
 				}
 			}
 		}

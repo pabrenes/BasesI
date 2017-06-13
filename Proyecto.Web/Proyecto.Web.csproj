@@ -80,14 +80,12 @@
       <DependentUpon>CentroMedico.dbml</DependentUpon>
     </Compile>
     <Compile Include="Clases\Cita\clCita.cs" />
-    <Compile Include="Clases\Empleado\clEmpleado.cs" />
-    <Compile Include="Clases\Empleado\clEmpleadoSede.cs" />
     <Compile Include="Clases\Empleado\clHorario.cs" />
-    <Compile Include="Clases\Empleado\clMedicoEspecialidad.cs" />
     <Compile Include="Clases\Factura\clFactura.cs" />
     <Compile Include="Clases\Laboratorio\clExamen.cs" />
     <Compile Include="Clases\Laboratorio\clItem.cs" />
     <Compile Include="Clases\Paciente\clPaciente.cs" />
+    <Compile Include="Clases\Personalizadas\clEmpleadoANNII.cs" />
     <Compile Include="Clases\Personalizadas\clPacienteCNA.cs" />
     <Compile Include="Clases\Sede\clSede.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
