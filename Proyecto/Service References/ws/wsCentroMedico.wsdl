@@ -13,6 +13,33 @@
   <wsdl:binding name="CustomBinding_wsCentroMedico" type="i0:wsCentroMedico">
     <wsp:PolicyReference URI="#CustomBinding_wsCentroMedico_policy" />
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="eliminarCita">
+      <soap12:operation soapAction="http://tempuri.org/wsCentroMedico/eliminarCita" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarCita">
+      <soap12:operation soapAction="http://tempuri.org/wsCentroMedico/registrarCita" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIDCitas">
+      <soap12:operation soapAction="http://tempuri.org/wsCentroMedico/getIDCitas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="getCitas">
       <soap12:operation soapAction="http://tempuri.org/wsCentroMedico/getCitas" style="document" />
       <wsdl:input>
@@ -33,6 +60,24 @@
     </wsdl:operation>
     <wsdl:operation name="getMedicos">
       <soap12:operation soapAction="http://tempuri.org/wsCentroMedico/getMedicos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMedicosSolos">
+      <soap12:operation soapAction="http://tempuri.org/wsCentroMedico/getMedicosSolos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCitasPorPeriodoMedico">
+      <soap12:operation soapAction="http://tempuri.org/wsCentroMedico/getCitasPorPeriodoMedico" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

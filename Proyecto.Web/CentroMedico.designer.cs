@@ -461,6 +461,41 @@ namespace cnCentroMedico
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), medico, sede, dia, fecha);
 			return ((ISingleResult<enCentroMedico.obtenerDisponibilidadMedicoPorDiaResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="CITA.obtenerCitas")]
+		public ISingleResult<enCentroMedico.obtenerCitasResult> obtenerCitas()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<enCentroMedico.obtenerCitasResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="CITA.obtenerIDCitas")]
+		public ISingleResult<enCentroMedico.obtenerIDCitasResult> obtenerIDCitas()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<enCentroMedico.obtenerIDCitasResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="CITA.eliminarCitaPorID")]
+		public int eliminarCitaPorID([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDCita", DbType="Decimal(20,0)")] System.Nullable<decimal> iDCita)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iDCita);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="EMPLEADO.obtenerMedicos")]
+		public ISingleResult<enCentroMedico.obtenerMedicosResult> obtenerMedicos()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<enCentroMedico.obtenerMedicosResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="CITA.obtenerCitasParaMedicoPorPeriodo")]
+		public ISingleResult<enCentroMedico.obtenerCitasParaMedicoPorPeriodoResult> obtenerCitasParaMedicoPorPeriodo([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Medico", DbType="Decimal(9,0)")] System.Nullable<decimal> medico, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="InicioPeriodo", DbType="Date")] System.Nullable<System.DateTime> inicioPeriodo, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FinPeriodo", DbType="Date")] System.Nullable<System.DateTime> finPeriodo)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), medico, inicioPeriodo, finPeriodo);
+			return ((ISingleResult<enCentroMedico.obtenerCitasParaMedicoPorPeriodoResult>)(result.ReturnValue));
+		}
 	}
 }
 namespace enCentroMedico
@@ -8624,6 +8659,650 @@ namespace enCentroMedico
 				if ((this._HORA != value))
 				{
 					this._HORA = value;
+				}
+			}
+		}
+	}
+	
+	public partial class obtenerCitasResult
+	{
+		
+		private decimal _Identificador;
+		
+		private decimal _Sede;
+		
+		private string _MedicoN;
+		
+		private decimal _IDMedico;
+		
+		private string _MedicoA;
+		
+		private string _Especialidad;
+		
+		private decimal _IDEspecialidad;
+		
+		private string _Cedula;
+		
+		private string _Apellido;
+		
+		private string _Nombre;
+		
+		private System.DateTime _Fecha;
+		
+		private decimal _Hora;
+		
+		private string _Observaciones;
+		
+		private char _Estado;
+		
+		private System.Nullable<decimal> _Factura;
+		
+		public obtenerCitasResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Identificador", DbType="Decimal(20,0) NOT NULL")]
+		public decimal Identificador
+		{
+			get
+			{
+				return this._Identificador;
+			}
+			set
+			{
+				if ((this._Identificador != value))
+				{
+					this._Identificador = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Sede", DbType="Decimal(4,0) NOT NULL")]
+		public decimal Sede
+		{
+			get
+			{
+				return this._Sede;
+			}
+			set
+			{
+				if ((this._Sede != value))
+				{
+					this._Sede = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MedicoN", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string MedicoN
+		{
+			get
+			{
+				return this._MedicoN;
+			}
+			set
+			{
+				if ((this._MedicoN != value))
+				{
+					this._MedicoN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDMedico", DbType="Decimal(9,0) NOT NULL")]
+		public decimal IDMedico
+		{
+			get
+			{
+				return this._IDMedico;
+			}
+			set
+			{
+				if ((this._IDMedico != value))
+				{
+					this._IDMedico = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MedicoA", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
+		public string MedicoA
+		{
+			get
+			{
+				return this._MedicoA;
+			}
+			set
+			{
+				if ((this._MedicoA != value))
+				{
+					this._MedicoA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Especialidad", DbType="VarChar(40) NOT NULL", CanBeNull=false)]
+		public string Especialidad
+		{
+			get
+			{
+				return this._Especialidad;
+			}
+			set
+			{
+				if ((this._Especialidad != value))
+				{
+					this._Especialidad = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDEspecialidad", DbType="Decimal(9,0) NOT NULL")]
+		public decimal IDEspecialidad
+		{
+			get
+			{
+				return this._IDEspecialidad;
+			}
+			set
+			{
+				if ((this._IDEspecialidad != value))
+				{
+					this._IDEspecialidad = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cedula", DbType="VarChar(12) NOT NULL", CanBeNull=false)]
+		public string Cedula
+		{
+			get
+			{
+				return this._Cedula;
+			}
+			set
+			{
+				if ((this._Cedula != value))
+				{
+					this._Cedula = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Apellido", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string Apellido
+		{
+			get
+			{
+				return this._Apellido;
+			}
+			set
+			{
+				if ((this._Apellido != value))
+				{
+					this._Apellido = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string Nombre
+		{
+			get
+			{
+				return this._Nombre;
+			}
+			set
+			{
+				if ((this._Nombre != value))
+				{
+					this._Nombre = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fecha", DbType="Date NOT NULL")]
+		public System.DateTime Fecha
+		{
+			get
+			{
+				return this._Fecha;
+			}
+			set
+			{
+				if ((this._Fecha != value))
+				{
+					this._Fecha = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Hora", DbType="Decimal(2,0) NOT NULL")]
+		public decimal Hora
+		{
+			get
+			{
+				return this._Hora;
+			}
+			set
+			{
+				if ((this._Hora != value))
+				{
+					this._Hora = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Observaciones", DbType="VarChar(200) NOT NULL", CanBeNull=false)]
+		public string Observaciones
+		{
+			get
+			{
+				return this._Observaciones;
+			}
+			set
+			{
+				if ((this._Observaciones != value))
+				{
+					this._Observaciones = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Estado", DbType="Char(1) NOT NULL")]
+		public char Estado
+		{
+			get
+			{
+				return this._Estado;
+			}
+			set
+			{
+				if ((this._Estado != value))
+				{
+					this._Estado = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Factura", DbType="Decimal(20,0)")]
+		public System.Nullable<decimal> Factura
+		{
+			get
+			{
+				return this._Factura;
+			}
+			set
+			{
+				if ((this._Factura != value))
+				{
+					this._Factura = value;
+				}
+			}
+		}
+	}
+	
+	public partial class obtenerIDCitasResult
+	{
+		
+		private decimal _IDCITA;
+		
+		public obtenerIDCitasResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDCITA", DbType="Decimal(20,0) NOT NULL")]
+		public decimal IDCITA
+		{
+			get
+			{
+				return this._IDCITA;
+			}
+			set
+			{
+				if ((this._IDCITA != value))
+				{
+					this._IDCITA = value;
+				}
+			}
+		}
+	}
+	
+	public partial class obtenerMedicosResult
+	{
+		
+		private decimal _IDEMPLEADO;
+		
+		private string _APELLIDOS;
+		
+		private string _NOMBRE;
+		
+		public obtenerMedicosResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDEMPLEADO", DbType="Decimal(9,0) NOT NULL")]
+		public decimal IDEMPLEADO
+		{
+			get
+			{
+				return this._IDEMPLEADO;
+			}
+			set
+			{
+				if ((this._IDEMPLEADO != value))
+				{
+					this._IDEMPLEADO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_APELLIDOS", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
+		public string APELLIDOS
+		{
+			get
+			{
+				return this._APELLIDOS;
+			}
+			set
+			{
+				if ((this._APELLIDOS != value))
+				{
+					this._APELLIDOS = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string NOMBRE
+		{
+			get
+			{
+				return this._NOMBRE;
+			}
+			set
+			{
+				if ((this._NOMBRE != value))
+				{
+					this._NOMBRE = value;
+				}
+			}
+		}
+	}
+	
+	public partial class obtenerCitasParaMedicoPorPeriodoResult
+	{
+		
+		private decimal _Identificador;
+		
+		private decimal _Sede;
+		
+		private string _MedicoN;
+		
+		private decimal _IDMedico;
+		
+		private string _MedicoA;
+		
+		private string _Especialidad;
+		
+		private decimal _IDEspecialidad;
+		
+		private string _Cedula;
+		
+		private string _Apellido;
+		
+		private string _Nombre;
+		
+		private System.DateTime _Fecha;
+		
+		private decimal _Hora;
+		
+		private string _Observaciones;
+		
+		private char _Estado;
+		
+		private System.Nullable<decimal> _Factura;
+		
+		public obtenerCitasParaMedicoPorPeriodoResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Identificador", DbType="Decimal(20,0) NOT NULL")]
+		public decimal Identificador
+		{
+			get
+			{
+				return this._Identificador;
+			}
+			set
+			{
+				if ((this._Identificador != value))
+				{
+					this._Identificador = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Sede", DbType="Decimal(4,0) NOT NULL")]
+		public decimal Sede
+		{
+			get
+			{
+				return this._Sede;
+			}
+			set
+			{
+				if ((this._Sede != value))
+				{
+					this._Sede = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MedicoN", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string MedicoN
+		{
+			get
+			{
+				return this._MedicoN;
+			}
+			set
+			{
+				if ((this._MedicoN != value))
+				{
+					this._MedicoN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDMedico", DbType="Decimal(9,0) NOT NULL")]
+		public decimal IDMedico
+		{
+			get
+			{
+				return this._IDMedico;
+			}
+			set
+			{
+				if ((this._IDMedico != value))
+				{
+					this._IDMedico = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MedicoA", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
+		public string MedicoA
+		{
+			get
+			{
+				return this._MedicoA;
+			}
+			set
+			{
+				if ((this._MedicoA != value))
+				{
+					this._MedicoA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Especialidad", DbType="VarChar(40) NOT NULL", CanBeNull=false)]
+		public string Especialidad
+		{
+			get
+			{
+				return this._Especialidad;
+			}
+			set
+			{
+				if ((this._Especialidad != value))
+				{
+					this._Especialidad = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDEspecialidad", DbType="Decimal(9,0) NOT NULL")]
+		public decimal IDEspecialidad
+		{
+			get
+			{
+				return this._IDEspecialidad;
+			}
+			set
+			{
+				if ((this._IDEspecialidad != value))
+				{
+					this._IDEspecialidad = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cedula", DbType="VarChar(12) NOT NULL", CanBeNull=false)]
+		public string Cedula
+		{
+			get
+			{
+				return this._Cedula;
+			}
+			set
+			{
+				if ((this._Cedula != value))
+				{
+					this._Cedula = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Apellido", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string Apellido
+		{
+			get
+			{
+				return this._Apellido;
+			}
+			set
+			{
+				if ((this._Apellido != value))
+				{
+					this._Apellido = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string Nombre
+		{
+			get
+			{
+				return this._Nombre;
+			}
+			set
+			{
+				if ((this._Nombre != value))
+				{
+					this._Nombre = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fecha", DbType="Date NOT NULL")]
+		public System.DateTime Fecha
+		{
+			get
+			{
+				return this._Fecha;
+			}
+			set
+			{
+				if ((this._Fecha != value))
+				{
+					this._Fecha = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Hora", DbType="Decimal(2,0) NOT NULL")]
+		public decimal Hora
+		{
+			get
+			{
+				return this._Hora;
+			}
+			set
+			{
+				if ((this._Hora != value))
+				{
+					this._Hora = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Observaciones", DbType="VarChar(200) NOT NULL", CanBeNull=false)]
+		public string Observaciones
+		{
+			get
+			{
+				return this._Observaciones;
+			}
+			set
+			{
+				if ((this._Observaciones != value))
+				{
+					this._Observaciones = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Estado", DbType="Char(1) NOT NULL")]
+		public char Estado
+		{
+			get
+			{
+				return this._Estado;
+			}
+			set
+			{
+				if ((this._Estado != value))
+				{
+					this._Estado = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Factura", DbType="Decimal(20,0)")]
+		public System.Nullable<decimal> Factura
+		{
+			get
+			{
+				return this._Factura;
+			}
+			set
+			{
+				if ((this._Factura != value))
+				{
+					this._Factura = value;
 				}
 			}
 		}

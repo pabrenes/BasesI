@@ -7,7 +7,7 @@ using System.Collections.ObjectModel;
 
 [DataContract]
 
-public class clEmpleadoANNII
+public class clEmpleadoNI
 {
 
     [DataMember]
@@ -15,29 +15,21 @@ public class clEmpleadoANNII
     [DataMember]
     public string Nombre { get; set; }
     [DataMember]
-    public string Especialidad { get; set; }
-    [DataMember]
     public decimal IDEmpleado { get; set; }
-    [DataMember]
-    public decimal IDEspecialidad { get; set; }
     [DataMember]
     public string forUI { get; set; }
 
-    public clEmpleadoANNII(
+    public clEmpleadoNI(
         string Apellidos,
         string Nombre,
-        string Especialidad,
-        decimal IDEmpleado,
-        decimal IDEspecialidad) {
+        decimal IDEmpleado) {
         this.Apellidos = Apellidos;
         this.Nombre = Nombre;
-        this.Especialidad = Especialidad;
         this.IDEmpleado = IDEmpleado;
-        this.IDEspecialidad = IDEspecialidad;
         forUI = toString();
     }
 
     public string toString() {
-        return Apellidos + " " + Nombre + " (" + Especialidad + ")" + " ID: " + IDEmpleado;
+        return Apellidos + " " + Nombre + " ID: " + IDEmpleado;
     }
 }

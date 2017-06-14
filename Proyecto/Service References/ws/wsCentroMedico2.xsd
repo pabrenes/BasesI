@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:complexType name="ArrayOfclCita">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="clCita" nillable="true" type="tns:clCita" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfclCita" nillable="true" type="tns:ArrayOfclCita" />
   <xs:complexType name="clCita">
     <xs:sequence>
       <xs:element minOccurs="0" name="CedulaPaciente" nillable="true" type="xs:string" />
@@ -22,6 +16,27 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="clCita" nillable="true" type="tns:clCita" />
+  <xs:complexType name="ArrayOfclCitaForUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clCitaForUser" nillable="true" type="tns:clCitaForUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfclCitaForUser" nillable="true" type="tns:ArrayOfclCitaForUser" />
+  <xs:complexType name="clCitaForUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cédula" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Especialidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Factura" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Identificador" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Médico" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sede" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clCitaForUser" nillable="true" type="tns:clCitaForUser" />
   <xs:complexType name="ArrayOfclPacienteCNA">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="clPacienteCNA" nillable="true" type="tns:clPacienteCNA" />
@@ -54,6 +69,21 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="clEmpleadoANNII" nillable="true" type="tns:clEmpleadoANNII" />
+  <xs:complexType name="ArrayOfclEmpleadoNI">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clEmpleadoNI" nillable="true" type="tns:clEmpleadoNI" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfclEmpleadoNI" nillable="true" type="tns:ArrayOfclEmpleadoNI" />
+  <xs:complexType name="clEmpleadoNI">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Apellidos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDEmpleado" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="forUI" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clEmpleadoNI" nillable="true" type="tns:clEmpleadoNI" />
   <xs:complexType name="ArrayOfclSede">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="clSede" nillable="true" type="tns:clSede" />

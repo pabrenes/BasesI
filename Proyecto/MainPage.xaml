@@ -48,7 +48,12 @@
                     <Rectangle x:Name="Divider_Examenes_Citas" Style="{StaticResource DividerStyle}"/>
 
                     <HyperlinkButton x:Name="HB_Citas" Style="{StaticResource LinkStyle}" 
-                                     NavigateUri="/Citas" TargetName="ContentFrame" Content="Citas"/>
+                                     NavigateUri="/mCitas" TargetName="ContentFrame" Content="Citas"/>
+
+                    <Rectangle x:Name="Divider_Consultas_Citas" Style="{StaticResource DividerStyle}"/>
+
+                    <HyperlinkButton x:Name="HB_Consultas" Style="{StaticResource LinkStyle}" 
+                                     NavigateUri="/Consultas" TargetName="ContentFrame" Content="Consultas"/>
 
                     <Rectangle x:Name="Divider_Citas_About" Style="{StaticResource DividerStyle}"/>
 

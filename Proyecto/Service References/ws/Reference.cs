@@ -197,6 +197,171 @@ namespace Proyecto.ws {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="clCitaForUser", Namespace="http://schemas.datacontract.org/2004/07/")]
+    public partial class clCitaForUser : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string CédulaField;
+        
+        private string EspecialidadField;
+        
+        private string EstadoField;
+        
+        private System.Nullable<decimal> FacturaField;
+        
+        private System.DateTime FechaField;
+        
+        private decimal IdentificadorField;
+        
+        private string MédicoField;
+        
+        private string NombreField;
+        
+        private string ObservacionesField;
+        
+        private decimal SedeField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Cédula {
+            get {
+                return this.CédulaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CédulaField, value) != true)) {
+                    this.CédulaField = value;
+                    this.RaisePropertyChanged("Cédula");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Especialidad {
+            get {
+                return this.EspecialidadField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EspecialidadField, value) != true)) {
+                    this.EspecialidadField = value;
+                    this.RaisePropertyChanged("Especialidad");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EstadoField, value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> Factura {
+            get {
+                return this.FacturaField;
+            }
+            set {
+                if ((this.FacturaField.Equals(value) != true)) {
+                    this.FacturaField = value;
+                    this.RaisePropertyChanged("Factura");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Fecha {
+            get {
+                return this.FechaField;
+            }
+            set {
+                if ((this.FechaField.Equals(value) != true)) {
+                    this.FechaField = value;
+                    this.RaisePropertyChanged("Fecha");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Identificador {
+            get {
+                return this.IdentificadorField;
+            }
+            set {
+                if ((this.IdentificadorField.Equals(value) != true)) {
+                    this.IdentificadorField = value;
+                    this.RaisePropertyChanged("Identificador");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Médico {
+            get {
+                return this.MédicoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MédicoField, value) != true)) {
+                    this.MédicoField = value;
+                    this.RaisePropertyChanged("Médico");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nombre {
+            get {
+                return this.NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
+                    this.NombreField = value;
+                    this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Observaciones {
+            get {
+                return this.ObservacionesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ObservacionesField, value) != true)) {
+                    this.ObservacionesField = value;
+                    this.RaisePropertyChanged("Observaciones");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Sede {
+            get {
+                return this.SedeField;
+            }
+            set {
+                if ((this.SedeField.Equals(value) != true)) {
+                    this.SedeField = value;
+                    this.RaisePropertyChanged("Sede");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="clPacienteCNA", Namespace="http://schemas.datacontract.org/2004/07/")]
     public partial class clPacienteCNA : object, System.ComponentModel.INotifyPropertyChanged {
         
@@ -377,6 +542,81 @@ namespace Proyecto.ws {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="clEmpleadoNI", Namespace="http://schemas.datacontract.org/2004/07/")]
+    public partial class clEmpleadoNI : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string ApellidosField;
+        
+        private decimal IDEmpleadoField;
+        
+        private string NombreField;
+        
+        private string forUIField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Apellidos {
+            get {
+                return this.ApellidosField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ApellidosField, value) != true)) {
+                    this.ApellidosField = value;
+                    this.RaisePropertyChanged("Apellidos");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal IDEmpleado {
+            get {
+                return this.IDEmpleadoField;
+            }
+            set {
+                if ((this.IDEmpleadoField.Equals(value) != true)) {
+                    this.IDEmpleadoField = value;
+                    this.RaisePropertyChanged("IDEmpleado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nombre {
+            get {
+                return this.NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
+                    this.NombreField = value;
+                    this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string forUI {
+            get {
+                return this.forUIField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.forUIField, value) != true)) {
+                    this.forUIField = value;
+                    this.RaisePropertyChanged("forUI");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="clSede", Namespace="http://schemas.datacontract.org/2004/07/")]
     public partial class clSede : object, System.ComponentModel.INotifyPropertyChanged {
         
@@ -499,10 +739,25 @@ namespace Proyecto.ws {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://tempuri.org", ConfigurationName="ws.wsCentroMedico")]
     public interface wsCentroMedico {
         
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/wsCentroMedico/eliminarCita", ReplyAction="http://tempuri.org/wsCentroMedico/eliminarCitaResponse")]
+        System.IAsyncResult BegineliminarCita(decimal IDCita, System.AsyncCallback callback, object asyncState);
+        
+        bool EndeliminarCita(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/wsCentroMedico/registrarCita", ReplyAction="http://tempuri.org/wsCentroMedico/registrarCitaResponse")]
+        System.IAsyncResult BeginregistrarCita(Proyecto.ws.clCita cita, System.AsyncCallback callback, object asyncState);
+        
+        bool EndregistrarCita(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/wsCentroMedico/getIDCitas", ReplyAction="http://tempuri.org/wsCentroMedico/getIDCitasResponse")]
+        System.IAsyncResult BegingetIDCitas(System.AsyncCallback callback, object asyncState);
+        
+        System.Collections.ObjectModel.ObservableCollection<decimal> EndgetIDCitas(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/wsCentroMedico/getCitas", ReplyAction="http://tempuri.org/wsCentroMedico/getCitasResponse")]
         System.IAsyncResult BegingetCitas(System.AsyncCallback callback, object asyncState);
         
-        System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCita> EndgetCitas(System.IAsyncResult result);
+        System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCitaForUser> EndgetCitas(System.IAsyncResult result);
         
         [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/wsCentroMedico/getPacientes", ReplyAction="http://tempuri.org/wsCentroMedico/getPacientesResponse")]
         System.IAsyncResult BegingetPacientes(System.AsyncCallback callback, object asyncState);
@@ -513,6 +768,16 @@ namespace Proyecto.ws {
         System.IAsyncResult BegingetMedicos(int sede, System.AsyncCallback callback, object asyncState);
         
         System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clEmpleadoANNII> EndgetMedicos(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/wsCentroMedico/getMedicosSolos", ReplyAction="http://tempuri.org/wsCentroMedico/getMedicosSolosResponse")]
+        System.IAsyncResult BegingetMedicosSolos(System.AsyncCallback callback, object asyncState);
+        
+        System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clEmpleadoNI> EndgetMedicosSolos(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/wsCentroMedico/getCitasPorPeriodoMedico", ReplyAction="http://tempuri.org/wsCentroMedico/getCitasPorPeriodoMedicoResponse")]
+        System.IAsyncResult BegingetCitasPorPeriodoMedico(decimal medico, System.DateTime inicio, System.DateTime fin, System.AsyncCallback callback, object asyncState);
+        
+        System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCitaForUser> EndgetCitasPorPeriodoMedico(System.IAsyncResult result);
         
         [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/wsCentroMedico/getSedes", ReplyAction="http://tempuri.org/wsCentroMedico/getSedesResponse")]
         System.IAsyncResult BegingetSedes(System.AsyncCallback callback, object asyncState);
@@ -531,6 +796,63 @@ namespace Proyecto.ws {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class eliminarCitaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public eliminarCitaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class registrarCitaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public registrarCitaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class getIDCitasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public getIDCitasCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public System.Collections.ObjectModel.ObservableCollection<decimal> Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((System.Collections.ObjectModel.ObservableCollection<decimal>)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public partial class getCitasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
@@ -540,10 +862,10 @@ namespace Proyecto.ws {
             this.results = results;
         }
         
-        public System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCita> Result {
+        public System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCitaForUser> Result {
             get {
                 base.RaiseExceptionIfNecessary();
-                return ((System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCita>)(this.results[0]));
+                return ((System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCitaForUser>)(this.results[0]));
             }
         }
     }
@@ -582,6 +904,44 @@ namespace Proyecto.ws {
             get {
                 base.RaiseExceptionIfNecessary();
                 return ((System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clEmpleadoANNII>)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class getMedicosSolosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public getMedicosSolosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clEmpleadoNI> Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clEmpleadoNI>)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class getCitasPorPeriodoMedicoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public getCitasPorPeriodoMedicoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCitaForUser> Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCitaForUser>)(this.results[0]));
             }
         }
     }
@@ -628,6 +988,24 @@ namespace Proyecto.ws {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public partial class wsCentroMedicoClient : System.ServiceModel.ClientBase<Proyecto.ws.wsCentroMedico>, Proyecto.ws.wsCentroMedico {
         
+        private BeginOperationDelegate onBegineliminarCitaDelegate;
+        
+        private EndOperationDelegate onEndeliminarCitaDelegate;
+        
+        private System.Threading.SendOrPostCallback oneliminarCitaCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginregistrarCitaDelegate;
+        
+        private EndOperationDelegate onEndregistrarCitaDelegate;
+        
+        private System.Threading.SendOrPostCallback onregistrarCitaCompletedDelegate;
+        
+        private BeginOperationDelegate onBegingetIDCitasDelegate;
+        
+        private EndOperationDelegate onEndgetIDCitasDelegate;
+        
+        private System.Threading.SendOrPostCallback ongetIDCitasCompletedDelegate;
+        
         private BeginOperationDelegate onBegingetCitasDelegate;
         
         private EndOperationDelegate onEndgetCitasDelegate;
@@ -645,6 +1023,18 @@ namespace Proyecto.ws {
         private EndOperationDelegate onEndgetMedicosDelegate;
         
         private System.Threading.SendOrPostCallback ongetMedicosCompletedDelegate;
+        
+        private BeginOperationDelegate onBegingetMedicosSolosDelegate;
+        
+        private EndOperationDelegate onEndgetMedicosSolosDelegate;
+        
+        private System.Threading.SendOrPostCallback ongetMedicosSolosCompletedDelegate;
+        
+        private BeginOperationDelegate onBegingetCitasPorPeriodoMedicoDelegate;
+        
+        private EndOperationDelegate onEndgetCitasPorPeriodoMedicoDelegate;
+        
+        private System.Threading.SendOrPostCallback ongetCitasPorPeriodoMedicoCompletedDelegate;
         
         private BeginOperationDelegate onBegingetSedesDelegate;
         
@@ -711,11 +1101,21 @@ namespace Proyecto.ws {
             }
         }
         
+        public event System.EventHandler<eliminarCitaCompletedEventArgs> eliminarCitaCompleted;
+        
+        public event System.EventHandler<registrarCitaCompletedEventArgs> registrarCitaCompleted;
+        
+        public event System.EventHandler<getIDCitasCompletedEventArgs> getIDCitasCompleted;
+        
         public event System.EventHandler<getCitasCompletedEventArgs> getCitasCompleted;
         
         public event System.EventHandler<getPacientesCompletedEventArgs> getPacientesCompleted;
         
         public event System.EventHandler<getMedicosCompletedEventArgs> getMedicosCompleted;
+        
+        public event System.EventHandler<getMedicosSolosCompletedEventArgs> getMedicosSolosCompleted;
+        
+        public event System.EventHandler<getCitasPorPeriodoMedicoCompletedEventArgs> getCitasPorPeriodoMedicoCompleted;
         
         public event System.EventHandler<getSedesCompletedEventArgs> getSedesCompleted;
         
@@ -726,12 +1126,148 @@ namespace Proyecto.ws {
         public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> CloseCompleted;
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult Proyecto.ws.wsCentroMedico.BegineliminarCita(decimal IDCita, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BegineliminarCita(IDCita, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        bool Proyecto.ws.wsCentroMedico.EndeliminarCita(System.IAsyncResult result) {
+            return base.Channel.EndeliminarCita(result);
+        }
+        
+        private System.IAsyncResult OnBegineliminarCita(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            decimal IDCita = ((decimal)(inValues[0]));
+            return ((Proyecto.ws.wsCentroMedico)(this)).BegineliminarCita(IDCita, callback, asyncState);
+        }
+        
+        private object[] OnEndeliminarCita(System.IAsyncResult result) {
+            bool retVal = ((Proyecto.ws.wsCentroMedico)(this)).EndeliminarCita(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OneliminarCitaCompleted(object state) {
+            if ((this.eliminarCitaCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.eliminarCitaCompleted(this, new eliminarCitaCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void eliminarCitaAsync(decimal IDCita) {
+            this.eliminarCitaAsync(IDCita, null);
+        }
+        
+        public void eliminarCitaAsync(decimal IDCita, object userState) {
+            if ((this.onBegineliminarCitaDelegate == null)) {
+                this.onBegineliminarCitaDelegate = new BeginOperationDelegate(this.OnBegineliminarCita);
+            }
+            if ((this.onEndeliminarCitaDelegate == null)) {
+                this.onEndeliminarCitaDelegate = new EndOperationDelegate(this.OnEndeliminarCita);
+            }
+            if ((this.oneliminarCitaCompletedDelegate == null)) {
+                this.oneliminarCitaCompletedDelegate = new System.Threading.SendOrPostCallback(this.OneliminarCitaCompleted);
+            }
+            base.InvokeAsync(this.onBegineliminarCitaDelegate, new object[] {
+                        IDCita}, this.onEndeliminarCitaDelegate, this.oneliminarCitaCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult Proyecto.ws.wsCentroMedico.BeginregistrarCita(Proyecto.ws.clCita cita, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginregistrarCita(cita, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        bool Proyecto.ws.wsCentroMedico.EndregistrarCita(System.IAsyncResult result) {
+            return base.Channel.EndregistrarCita(result);
+        }
+        
+        private System.IAsyncResult OnBeginregistrarCita(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            Proyecto.ws.clCita cita = ((Proyecto.ws.clCita)(inValues[0]));
+            return ((Proyecto.ws.wsCentroMedico)(this)).BeginregistrarCita(cita, callback, asyncState);
+        }
+        
+        private object[] OnEndregistrarCita(System.IAsyncResult result) {
+            bool retVal = ((Proyecto.ws.wsCentroMedico)(this)).EndregistrarCita(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnregistrarCitaCompleted(object state) {
+            if ((this.registrarCitaCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.registrarCitaCompleted(this, new registrarCitaCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void registrarCitaAsync(Proyecto.ws.clCita cita) {
+            this.registrarCitaAsync(cita, null);
+        }
+        
+        public void registrarCitaAsync(Proyecto.ws.clCita cita, object userState) {
+            if ((this.onBeginregistrarCitaDelegate == null)) {
+                this.onBeginregistrarCitaDelegate = new BeginOperationDelegate(this.OnBeginregistrarCita);
+            }
+            if ((this.onEndregistrarCitaDelegate == null)) {
+                this.onEndregistrarCitaDelegate = new EndOperationDelegate(this.OnEndregistrarCita);
+            }
+            if ((this.onregistrarCitaCompletedDelegate == null)) {
+                this.onregistrarCitaCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnregistrarCitaCompleted);
+            }
+            base.InvokeAsync(this.onBeginregistrarCitaDelegate, new object[] {
+                        cita}, this.onEndregistrarCitaDelegate, this.onregistrarCitaCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult Proyecto.ws.wsCentroMedico.BegingetIDCitas(System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BegingetIDCitas(callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Collections.ObjectModel.ObservableCollection<decimal> Proyecto.ws.wsCentroMedico.EndgetIDCitas(System.IAsyncResult result) {
+            return base.Channel.EndgetIDCitas(result);
+        }
+        
+        private System.IAsyncResult OnBegingetIDCitas(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return ((Proyecto.ws.wsCentroMedico)(this)).BegingetIDCitas(callback, asyncState);
+        }
+        
+        private object[] OnEndgetIDCitas(System.IAsyncResult result) {
+            System.Collections.ObjectModel.ObservableCollection<decimal> retVal = ((Proyecto.ws.wsCentroMedico)(this)).EndgetIDCitas(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OngetIDCitasCompleted(object state) {
+            if ((this.getIDCitasCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.getIDCitasCompleted(this, new getIDCitasCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void getIDCitasAsync() {
+            this.getIDCitasAsync(null);
+        }
+        
+        public void getIDCitasAsync(object userState) {
+            if ((this.onBegingetIDCitasDelegate == null)) {
+                this.onBegingetIDCitasDelegate = new BeginOperationDelegate(this.OnBegingetIDCitas);
+            }
+            if ((this.onEndgetIDCitasDelegate == null)) {
+                this.onEndgetIDCitasDelegate = new EndOperationDelegate(this.OnEndgetIDCitas);
+            }
+            if ((this.ongetIDCitasCompletedDelegate == null)) {
+                this.ongetIDCitasCompletedDelegate = new System.Threading.SendOrPostCallback(this.OngetIDCitasCompleted);
+            }
+            base.InvokeAsync(this.onBegingetIDCitasDelegate, null, this.onEndgetIDCitasDelegate, this.ongetIDCitasCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult Proyecto.ws.wsCentroMedico.BegingetCitas(System.AsyncCallback callback, object asyncState) {
             return base.Channel.BegingetCitas(callback, asyncState);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCita> Proyecto.ws.wsCentroMedico.EndgetCitas(System.IAsyncResult result) {
+        System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCitaForUser> Proyecto.ws.wsCentroMedico.EndgetCitas(System.IAsyncResult result) {
             return base.Channel.EndgetCitas(result);
         }
         
@@ -740,7 +1276,7 @@ namespace Proyecto.ws {
         }
         
         private object[] OnEndgetCitas(System.IAsyncResult result) {
-            System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCita> retVal = ((Proyecto.ws.wsCentroMedico)(this)).EndgetCitas(result);
+            System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCitaForUser> retVal = ((Proyecto.ws.wsCentroMedico)(this)).EndgetCitas(result);
             return new object[] {
                     retVal};
         }
@@ -857,6 +1393,100 @@ namespace Proyecto.ws {
             }
             base.InvokeAsync(this.onBegingetMedicosDelegate, new object[] {
                         sede}, this.onEndgetMedicosDelegate, this.ongetMedicosCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult Proyecto.ws.wsCentroMedico.BegingetMedicosSolos(System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BegingetMedicosSolos(callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clEmpleadoNI> Proyecto.ws.wsCentroMedico.EndgetMedicosSolos(System.IAsyncResult result) {
+            return base.Channel.EndgetMedicosSolos(result);
+        }
+        
+        private System.IAsyncResult OnBegingetMedicosSolos(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return ((Proyecto.ws.wsCentroMedico)(this)).BegingetMedicosSolos(callback, asyncState);
+        }
+        
+        private object[] OnEndgetMedicosSolos(System.IAsyncResult result) {
+            System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clEmpleadoNI> retVal = ((Proyecto.ws.wsCentroMedico)(this)).EndgetMedicosSolos(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OngetMedicosSolosCompleted(object state) {
+            if ((this.getMedicosSolosCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.getMedicosSolosCompleted(this, new getMedicosSolosCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void getMedicosSolosAsync() {
+            this.getMedicosSolosAsync(null);
+        }
+        
+        public void getMedicosSolosAsync(object userState) {
+            if ((this.onBegingetMedicosSolosDelegate == null)) {
+                this.onBegingetMedicosSolosDelegate = new BeginOperationDelegate(this.OnBegingetMedicosSolos);
+            }
+            if ((this.onEndgetMedicosSolosDelegate == null)) {
+                this.onEndgetMedicosSolosDelegate = new EndOperationDelegate(this.OnEndgetMedicosSolos);
+            }
+            if ((this.ongetMedicosSolosCompletedDelegate == null)) {
+                this.ongetMedicosSolosCompletedDelegate = new System.Threading.SendOrPostCallback(this.OngetMedicosSolosCompleted);
+            }
+            base.InvokeAsync(this.onBegingetMedicosSolosDelegate, null, this.onEndgetMedicosSolosDelegate, this.ongetMedicosSolosCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult Proyecto.ws.wsCentroMedico.BegingetCitasPorPeriodoMedico(decimal medico, System.DateTime inicio, System.DateTime fin, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BegingetCitasPorPeriodoMedico(medico, inicio, fin, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCitaForUser> Proyecto.ws.wsCentroMedico.EndgetCitasPorPeriodoMedico(System.IAsyncResult result) {
+            return base.Channel.EndgetCitasPorPeriodoMedico(result);
+        }
+        
+        private System.IAsyncResult OnBegingetCitasPorPeriodoMedico(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            decimal medico = ((decimal)(inValues[0]));
+            System.DateTime inicio = ((System.DateTime)(inValues[1]));
+            System.DateTime fin = ((System.DateTime)(inValues[2]));
+            return ((Proyecto.ws.wsCentroMedico)(this)).BegingetCitasPorPeriodoMedico(medico, inicio, fin, callback, asyncState);
+        }
+        
+        private object[] OnEndgetCitasPorPeriodoMedico(System.IAsyncResult result) {
+            System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCitaForUser> retVal = ((Proyecto.ws.wsCentroMedico)(this)).EndgetCitasPorPeriodoMedico(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OngetCitasPorPeriodoMedicoCompleted(object state) {
+            if ((this.getCitasPorPeriodoMedicoCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.getCitasPorPeriodoMedicoCompleted(this, new getCitasPorPeriodoMedicoCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void getCitasPorPeriodoMedicoAsync(decimal medico, System.DateTime inicio, System.DateTime fin) {
+            this.getCitasPorPeriodoMedicoAsync(medico, inicio, fin, null);
+        }
+        
+        public void getCitasPorPeriodoMedicoAsync(decimal medico, System.DateTime inicio, System.DateTime fin, object userState) {
+            if ((this.onBegingetCitasPorPeriodoMedicoDelegate == null)) {
+                this.onBegingetCitasPorPeriodoMedicoDelegate = new BeginOperationDelegate(this.OnBegingetCitasPorPeriodoMedico);
+            }
+            if ((this.onEndgetCitasPorPeriodoMedicoDelegate == null)) {
+                this.onEndgetCitasPorPeriodoMedicoDelegate = new EndOperationDelegate(this.OnEndgetCitasPorPeriodoMedico);
+            }
+            if ((this.ongetCitasPorPeriodoMedicoCompletedDelegate == null)) {
+                this.ongetCitasPorPeriodoMedicoCompletedDelegate = new System.Threading.SendOrPostCallback(this.OngetCitasPorPeriodoMedicoCompleted);
+            }
+            base.InvokeAsync(this.onBegingetCitasPorPeriodoMedicoDelegate, new object[] {
+                        medico,
+                        inicio,
+                        fin}, this.onEndgetCitasPorPeriodoMedicoDelegate, this.ongetCitasPorPeriodoMedicoCompletedDelegate, userState);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1031,15 +1661,53 @@ namespace Proyecto.ws {
                     base(client) {
             }
             
+            public System.IAsyncResult BegineliminarCita(decimal IDCita, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = IDCita;
+                System.IAsyncResult _result = base.BeginInvoke("eliminarCita", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public bool EndeliminarCita(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                bool _result = ((bool)(base.EndInvoke("eliminarCita", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginregistrarCita(Proyecto.ws.clCita cita, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = cita;
+                System.IAsyncResult _result = base.BeginInvoke("registrarCita", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public bool EndregistrarCita(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                bool _result = ((bool)(base.EndInvoke("registrarCita", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BegingetIDCitas(System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[0];
+                System.IAsyncResult _result = base.BeginInvoke("getIDCitas", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public System.Collections.ObjectModel.ObservableCollection<decimal> EndgetIDCitas(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                System.Collections.ObjectModel.ObservableCollection<decimal> _result = ((System.Collections.ObjectModel.ObservableCollection<decimal>)(base.EndInvoke("getIDCitas", _args, result)));
+                return _result;
+            }
+            
             public System.IAsyncResult BegingetCitas(System.AsyncCallback callback, object asyncState) {
                 object[] _args = new object[0];
                 System.IAsyncResult _result = base.BeginInvoke("getCitas", _args, callback, asyncState);
                 return _result;
             }
             
-            public System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCita> EndgetCitas(System.IAsyncResult result) {
+            public System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCitaForUser> EndgetCitas(System.IAsyncResult result) {
                 object[] _args = new object[0];
-                System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCita> _result = ((System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCita>)(base.EndInvoke("getCitas", _args, result)));
+                System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCitaForUser> _result = ((System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCitaForUser>)(base.EndInvoke("getCitas", _args, result)));
                 return _result;
             }
             
@@ -1065,6 +1733,33 @@ namespace Proyecto.ws {
             public System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clEmpleadoANNII> EndgetMedicos(System.IAsyncResult result) {
                 object[] _args = new object[0];
                 System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clEmpleadoANNII> _result = ((System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clEmpleadoANNII>)(base.EndInvoke("getMedicos", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BegingetMedicosSolos(System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[0];
+                System.IAsyncResult _result = base.BeginInvoke("getMedicosSolos", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clEmpleadoNI> EndgetMedicosSolos(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clEmpleadoNI> _result = ((System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clEmpleadoNI>)(base.EndInvoke("getMedicosSolos", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BegingetCitasPorPeriodoMedico(decimal medico, System.DateTime inicio, System.DateTime fin, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[3];
+                _args[0] = medico;
+                _args[1] = inicio;
+                _args[2] = fin;
+                System.IAsyncResult _result = base.BeginInvoke("getCitasPorPeriodoMedico", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCitaForUser> EndgetCitasPorPeriodoMedico(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCitaForUser> _result = ((System.Collections.ObjectModel.ObservableCollection<Proyecto.ws.clCitaForUser>)(base.EndInvoke("getCitasPorPeriodoMedico", _args, result)));
                 return _result;
             }
             

@@ -89,8 +89,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Views\Citas.xaml.cs">
-      <DependentUpon>Citas.xaml</DependentUpon>
+    <Compile Include="Views\Consultas.xaml.cs">
+      <DependentUpon>Consultas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\mCitas.xaml.cs">
+      <DependentUpon>mCitas.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ErrorWindow.xaml.cs">
       <DependentUpon>ErrorWindow.xaml</DependentUpon>
@@ -118,7 +121,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Resource>
-    <Page Include="Views\Citas.xaml">
+    <Page Include="Views\Consultas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\mCitas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -145,10 +152,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AppManifest.xml" />
-    <None Include="Service References\ws\Proyecto.ws.clCita.datasource">
+    <None Include="Service References\ws\Proyecto.ws.clCitaForUser.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ws\Proyecto.ws.clEmpleadoANNII.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ws\Proyecto.ws.clEmpleadoNI.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ws\Proyecto.ws.clHorario.datasource">
@@ -177,6 +187,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ws\wsCentroMedico2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ws\wsCentroMedico3.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

@@ -43,7 +43,7 @@ public class clCita
 		DateTime FechaCita,
 		string Observaciones,
 		string Estado,
-		decimal IDFactura)
+		decimal? IDFactura)
 	{
 		this.IDCita = IDCita;
 		this.Sede = Sede;

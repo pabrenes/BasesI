@@ -80,7 +80,9 @@
       <DependentUpon>CentroMedico.dbml</DependentUpon>
     </Compile>
     <Compile Include="Clases\Cita\clCita.cs" />
+    <Compile Include="Clases\Cita\clCitaForUser.cs" />
     <Compile Include="Clases\Empleado\clHorario.cs" />
+    <Compile Include="Clases\Empleado\clMedicoNI.cs" />
     <Compile Include="Clases\Factura\clFactura.cs" />
     <Compile Include="Clases\Laboratorio\clExamen.cs" />
     <Compile Include="Clases\Laboratorio\clItem.cs" />
