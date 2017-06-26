@@ -10,6 +10,7 @@
            Title="Consultas Page">
     <Grid x:Name="LayoutRoot">
 
+        
         <StackPanel HorizontalAlignment="Left" Height="100" Margin="40,40,0,0" VerticalAlignment="Top" Width="1120" Orientation="Horizontal">
             <sdk:Label x:Name="LB_Consultas" Width="250" Margin="0,10" FontSize="36" Content="Consultas"/>
             <StackPanel HorizontalAlignment="Center" Height="100" VerticalAlignment="Center" Width="870" Orientation="Horizontal">
